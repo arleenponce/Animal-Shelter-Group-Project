@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: pets_development
+
+test:
+  adapter: postgresql
+  database: pets_test
