@@ -15,6 +15,7 @@ class PetsController < ApplicationController
   # GET /pets/new
   def new
     @pet = Pet.new
+    @photo = PetImage.new
   end
 
   # GET /pets/1/edit
