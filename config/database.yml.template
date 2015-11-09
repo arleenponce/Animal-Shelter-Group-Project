@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: pets_development
+  user: ENTER USERNAME HERE
+  password: ENTER PASSWORD HERE
+
+test:
+  adapter: postgresql
+  database: pets_test
+  user: ENTER USERNAME HERE
+  password: ENTER PASSWORD HERE
