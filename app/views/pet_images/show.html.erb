@@ -5,5 +5,10 @@
   <%= @pet_image.pet_id %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@pet_image.photo.url(:medium))%>
+</p>
+
 <%= link_to 'Edit', edit_pet_image_path(@pet_image) %> |
 <%= link_to 'Back', pet_images_path %>

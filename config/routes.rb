@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
   resources :pet_images
   resources :pets
   # The priority is based upon order of creation: first created -> highest priority.

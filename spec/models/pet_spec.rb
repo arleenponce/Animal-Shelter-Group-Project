@@ -1,11 +1,19 @@
-require_relative 'rails_helper'
+require_relative '../rails_helper'
 # require 'paperclip'
 # require "paperclip/matchers"
 
 describe Pet do
   before(:each) do
     aDog = Pet.new
-    aDog.photo = File.new("app/assets/images/puppy1.jpg")
+    aDogImage = PetImage.new
+    aDogImage.photo_file_name = "dummyfile.jpg"
+    aDogImage.photo_content_type = ".jpg"
+    aDogImage.photo_file_size = "2mb"
+    aDogImage.photo_updated_at = Date.new
+    aDogImage.save
+    
+    aDog.pet_images.photo << aDogImage
+    aDog.pet_images.photo.save
   end
 
   it "should have a photo" do

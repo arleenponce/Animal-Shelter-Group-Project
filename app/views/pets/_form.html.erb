@@ -16,10 +16,18 @@
     <%= f.text_field :name %>
   </div>
 
+  <% @pet.pet_images.each do |pet_image| %>
+    <%= image_tag(pet_image.photo.url(:medium)) %>
+    <%= link_to 'Destroy', '/pet_images/' + pet_image.id.to_s, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+
   <div class="field">
-    <%= f.label :photo %><br>
-    <span class="input"><%=f.file_field :photo %></span>
+  <%= f.label :pet_images, :class => 'control-label' %>
+  <p>To upload multiple images, select all images that you want to upload by holding Command (Mac) or Control (PC).</p>
+  <div class="controls">
+    <%= file_field_tag "photos[]", type: :file, multiple: true %>
   </div>
+</div
 
   <div class="field">
     <%= f.label :species %><br>

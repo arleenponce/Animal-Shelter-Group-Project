@@ -54,9 +54,10 @@ class PetImagesController < ApplicationController
   # DELETE /pet_images/1
   # DELETE /pet_images/1.json
   def destroy
+    @pet = @pet_image.pet
     @pet_image.destroy
     respond_to do |format|
-      format.html { redirect_to pet_images_url, notice: 'Pet image was successfully destroyed.' }
+      format.html { redirect_to @pet, notice: 'Pet image was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +70,6 @@ class PetImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_image_params
-      params.require(:pet_image).permit(:pet_id)
+      params.require(:pet_image).permit(:pet_id, :photo)
     end
 end

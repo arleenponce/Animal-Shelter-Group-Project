@@ -2,8 +2,12 @@ class PetImage < ActiveRecord::Base
   belongs_to :pet
 
   has_attached_file :photo, styles: { small: "150x150#", medium: "275x275#", large: "400x400#", thumb: "90x90#" }
+    # :path => ":rails_root/public/images/:id/:filename",
+    # :url => "/images/:id/:filename"
+
   validates_attachment :photo, presence: true,
-    content_type: { content_type: ["image/jpg"] },
+    content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] },
       size: { in: 0..5.megabytes }
+
 
 end
