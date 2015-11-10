@@ -11,37 +11,34 @@
     </div>
   <% end %>
 
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :species %><br>
+  <%= f.select :species,[['Dog', 'dog'], ['Cat', 'cat'], ['Other','other']] %>
+</div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+     <%= f.label :gender %><br>
+     <%= f.label :gender, "Male" %>
+     <%= f.radio_button :gender, 'male' %>
+     <%= f.label :gender, "Female" %>
+     <%= f.radio_button :gender, 'female' %>
   </div>
-  <div class="field">
-    <%= f.label :species %><br>
-    <select name="species">
-      <option value="" selected disabled>Choose a Species</option>
-      <option value="dog">Dog</option>
-      <option value="cat">Cat</option>
-      <option value="other">Other</option>
-    </select>
-
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <input type="radio" name="gender" value="male">Male  <input type="radio" name="gender" value="female">Female
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.text_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.number_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :breed %><br>
-    <%= f.text_field :breed %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="field">
+  <%= f.label :age %><br>
+  <%= f.text_field :age %>
+</div>
+<div class="field">
+  <%= f.label :weight %><br>
+  <%= f.number_field :weight %>
+</div>
+<div class="field">
+  <%= f.label :breed %><br>
+  <%= f.text_field :breed %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
