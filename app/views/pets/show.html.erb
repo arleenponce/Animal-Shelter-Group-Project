@@ -5,6 +5,10 @@
   <%= @pet.name %>
 </p>
 
+<% @pet.pet_images.each do |pet_image| %>
+  <%= image_tag(pet_image.photo.url(:medium)) %>
+<% end %>
+
 <p>
   <strong>Species:</strong>
   <%= @pet.species %>

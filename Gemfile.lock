@@ -182,7 +182,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.3)
+  paperclip
   pg
   rails (= 4.2.4)
   rspec-rails (~> 3.0)

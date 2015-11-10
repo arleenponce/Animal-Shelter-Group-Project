@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: [:show, :edit, :update, :destroy]
+  before_action :set_pet, only: [:show, :edit, :update, :destroy, :pet_image]
 
   # GET /pets
   # GET /pets.json
@@ -19,6 +19,7 @@ class PetsController < ApplicationController
 
   # GET /pets/1/edit
   def edit
+    @pet = Pet.find(params[:id])
   end
 
   # POST /pets
@@ -28,6 +29,7 @@ class PetsController < ApplicationController
 
     respond_to do |format|
       if @pet.save
+        @pet = multiple_photos(@pet)
         format.html { redirect_to @pet, notice: 'Pet was successfully created.' }
         format.json { render :show, status: :created, location: @pet }
       else
@@ -42,6 +44,8 @@ class PetsController < ApplicationController
   def update
     respond_to do |format|
       if @pet.update(pet_params)
+        @pet = multiple_photos(@pet)
+
         format.html { redirect_to @pet, notice: 'Pet was successfully updated.' }
         format.json { render :show, status: :ok, location: @pet }
       else
@@ -61,6 +65,7 @@ class PetsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pet
@@ -70,5 +75,14 @@ class PetsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_params
       params.require(:pet).permit(:name, :species, :gender, :age, :weight, :breed)
+    end
+
+    def multiple_photos(pet)
+      if params[:photos]
+        params[:photos].each do |image|
+          pet.pet_images.create(photo: image)
+        end
+      end
+      return pet
     end
 end
