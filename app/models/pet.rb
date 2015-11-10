@@ -7,4 +7,5 @@ class Pet < ActiveRecord::Base
 
   accepts_nested_attributes_for :pet_images, :reject_if => lambda { |t| t['pet_image'].nil? }
 
+
 end

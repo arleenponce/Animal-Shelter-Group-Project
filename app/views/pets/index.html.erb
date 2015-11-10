@@ -20,7 +20,11 @@
     <% @pets.each do |pet| %>
       <tr>
         <td><%= pet.name %></td>
-        <td><%= image_tag(pet.pet_images.first.photo(:thumb)) %></td>
+        <% if pet.pet_images.first.nil? %>
+          <td>No Image uploaded</td>
+          <% else %>
+            <td><%= image_tag(pet.pet_images.first.photo.url(:thumb)) %></td>
+        <% end %>
         <td><%= pet.species %></td>
         <td><%= pet.gender %></td>
         <td><%= pet.age %></td>

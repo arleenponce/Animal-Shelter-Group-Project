@@ -5,9 +5,14 @@
   <%= @pet.name %>
 </p>
 
+<% if @pet.pet_images.first.nil? %>
+  <%= image_tag "comingsoon.jpg" %>
+<% end %>
+  
 <% @pet.pet_images.each do |pet_image| %>
   <%= image_tag(pet_image.photo.url(:medium)) %>
 <% end %>
+
 
 <p>
   <strong>Species:</strong>
