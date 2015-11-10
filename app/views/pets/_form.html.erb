@@ -34,11 +34,21 @@
   <%= f.label :weight %><br>
   <%= f.number_field :weight %>
 </div>
-<div class="field">
-  <%= f.label :breed %><br>
-  <%= f.text_field :breed %>
-</div>
-<div class="actions">
-  <%= f.submit %>
-</div>
+
+
+
+  <form action="/pets/new/add_breed" method= "post">
+    <input name="_method" type="hidden" value="patch">
+  <div class= "field">
+    <label for="breed_name">Breed</label><br>
+    <input type="text" name="breed[name]" id="breed_name"/>
+  </div>
+  <div class ="actions">
+    <input type ="submit" name="commit" value="Create Pet"/>
+  </div>
+</form>
+
+
+
+
 <% end %>
