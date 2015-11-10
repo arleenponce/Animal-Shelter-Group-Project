@@ -16,11 +16,11 @@
     </tr>
   </thead>
 
-  <tbody> 
+  <tbody>
     <% @pets.each do |pet| %>
       <tr>
         <td><%= pet.name %></td>
-
+        <td><%= image_tag(pet.pet_images.first.photo(:thumb)) %></td>
         <td><%= pet.species %></td>
         <td><%= pet.gender %></td>
         <td><%= pet.age %></td>
