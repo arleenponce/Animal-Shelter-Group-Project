@@ -6,13 +6,13 @@ describe "uploading pictures to a pet" do
     fill_in('Name', :with => "Fido")
     attach_file('photos[]', fixture_image_path)
     select("Dog", :from => "species")
-    
+
     click_button 'Create Pet'
 
   end
 
-  def fixture_image_path
-    Rails.root.join('spec', 'support', 'puppy1.jpg')
-  end
+end
 
+def fixture_image_path
+  Rails.root.join('spec', 'support', 'puppy1.jpg')
 end
