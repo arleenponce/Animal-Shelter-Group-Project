@@ -3,28 +3,13 @@ require_relative '../rails_helper'
 # require "paperclip/matchers"
 
 describe Pet do
-  before(:each) do
+
+  it "should be able to have many photos" do
     aDog = Pet.new
+    aDog.name = "Fido"
+
     aDogImage = PetImage.new
-    aDogImage.photo_file_name = "dummyfile.jpg"
-    aDogImage.photo_content_type = ".jpg"
-    aDogImage.photo_file_size = "2mb"
-    aDogImage.photo_updated_at = Date.new
-    aDogImage.save
-    
-    aDog.pet_images.photo << aDogImage
-    aDog.pet_images.photo.save
-  end
 
-  it "should have a photo" do
-    expect(aDog.photo).not_to be_nil
+    expect(aDog.pet_images.to_a).to be_kind_of Array
   end
-  # it { should have_attached_file(:photo) }
-  # it { should validate_attachment_presence(:photo) }
-  # it { should validate_attachment_content_type(:photo).
-  #               allowing('image/jpg', 'image/gif').
-  #               rejecting('text/plain', 'text/xml') }
-  # it { should validate_attachment_size(:photo).
-  #               less_than(5.megabytes) }
-
 end

@@ -22,12 +22,10 @@
   <% end %>
 
   <div class="field">
-  <%= f.label :pet_images, :class => 'control-label' %>
-  <p>To upload multiple images, select all images that you want to upload by holding Command (Mac) or Control (PC).</p>
-  <div class="controls">
+    <%= f.label :Photo %>
+    <p>To upload multiple images, select all images that you want to upload by holding Command (Mac) or Control (PC).</p>
     <%= file_field_tag "photos[]", type: :file, multiple: true %>
   </div>
-</div
 
   <div class="field">
     <%= f.label :species %><br>
@@ -41,7 +39,7 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <input type="radio" name="gender" value="male">Male  <input type="radio" name="gender" value="female">Female
+    <input type="radio" name="gender" value="male" label="Male">Male  <input type="radio" name="gender" value="female" label="female">Female
   </div>
   <div class="field">
     <%= f.label :age %><br>
