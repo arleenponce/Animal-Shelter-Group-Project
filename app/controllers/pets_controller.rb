@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_pet, only: [:show, :edit, :update, :destroy, :pet_image]
+  before_filter :authenticate_admin!, except: [:index, :show]
   # GET /pets
   # GET /pets.json
   def index
@@ -19,15 +19,19 @@ class PetsController < ApplicationController
 
   # GET /pets/1/edit
   def edit
+    @pet = Pet.find(params[:id])
   end
 
   # POST /pets
   # POST /pets.json
   def create
     @pet = Pet.new(pet_params)
+    add_breed
+    @pet.breeds << @breeds
 
     respond_to do |format|
       if @pet.save
+        @pet = multiple_photos(@pet)
         format.html { redirect_to @pet, notice: 'Pet was successfully created.' }
         format.json { render :show, status: :created, location: @pet }
       else
@@ -40,8 +44,13 @@ class PetsController < ApplicationController
   # PATCH/PUT /pets/1
   # PATCH/PUT /pets/1.json
   def update
+    add_breed
+    @pet.breeds << @breeds
+
     respond_to do |format|
       if @pet.update(pet_params)
+        @pet = multiple_photos(@pet)
+
         format.html { redirect_to @pet, notice: 'Pet was successfully updated.' }
         format.json { render :show, status: :ok, location: @pet }
       else
@@ -68,7 +77,29 @@ class PetsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # def pet_params
+    #   params.permit(:pet)
+    # end
     def pet_params
-      params.require(:pet).permit(:name, :species, :gender, :age, :weight, :breed)
+      params.require(:pet).permit(:name, :species, :gender, :age, :weight)
+    end
+
+    def multiple_photos(pet)
+      if params[:photos]
+        params[:photos].each do |image|
+          pet.pet_images.create(photo: image)
+        end
+      end
+      return pet
+    end
+
+    # Possible option for adding breeds to pets, as adapted from Recipes Controller
+    # would be called within the create/edit method, probably
+    def add_breed
+      @breeds = []
+      # Check to see if the breed's name exists yet, and if so, use that breed id
+      breed_name_string_from_user = params[:breed][:breed_name]
+      @breed = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
+      @breeds << @breed
     end
 end

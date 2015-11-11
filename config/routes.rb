@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
+  
+  devise_for :admins, :controllers => { 'registrations#destroy' => 'registrations#destroy' }
+
+  root to: "pets#index"
+
+  match('pets/new/add_breed', {:via => :get, :to => "pets#new"})
+  match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#create"})
+  match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#update"})
+  match('pets', {:via => :patch, :to => "pets#create"})
+
+  match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
+
+  resources :pet_images
+  resources :breeds
   resources :pets
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

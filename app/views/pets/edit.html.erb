@@ -4,3 +4,4 @@
 
 <%= link_to 'Show', @pet %> |
 <%= link_to 'Back', pets_path %>
+<%= link_to 'Destroy', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
