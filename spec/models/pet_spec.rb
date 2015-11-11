@@ -67,6 +67,13 @@ describe Pet do
         expect(pet.errors[:weight]).to include("can't be blank")
     end
 
+    it "should be able to have a description" do
+      aDog = Pet.new
+      aDog.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+      expect(aDog.description).to eq "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    end
+
     it "should be able to have many photos" do
       aDog = Pet.new
       aDog.name = "Fido"

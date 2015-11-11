@@ -5,7 +5,7 @@ describe "uploading pictures to a pet" do
     visit '/pets/new'
     fill_in('Name', :with => "Fido")
     attach_file('photos[]', fixture_image_path)
-    select("Dog", :from => "species")
+    select("Dog", :from => "Species")
 
     click_button 'Create Pet'
 
