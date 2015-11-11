@@ -7,6 +7,7 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: black;
 }
 
 .text-muted {
@@ -61,12 +62,15 @@ h6 {
 }
 
 .bg-light-gray {
-    background-color: #3D9943;
-    opacity: .7;
+    background-color: #C4BBB8;
+    opacity: .9;
 }
 
 .bg-darkest-gray {
-    background-color: #222;
+    background-color: #232528;
+}
+#services{
+  background-color: black;
 }
 
 .btn-primary {
@@ -120,13 +124,13 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 20px 40px;
-    border: 3px solid #DCF763;
+    border: 3px solid white;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #DCF763;;
+    color: white;
     background-color: transparent;
 
 }
@@ -148,34 +152,16 @@ fieldset[disabled] .btn-primary.active {
     background-image: none;
 }
 
-.btn-xl.disabled,
-.btn-xl[disabled],
-fieldset[disabled] .btn-xl,
-.btn-xl.disabled:hover,
-.btn-xl[disabled]:hover,
-fieldset[disabled] .btn-xl:hover,
-.btn-xl.disabled:focus,
-.btn-xl[disabled]:focus,
-fieldset[disabled] .btn-xl:focus,
-.btn-xl.disabled:active,
-.btn-xl[disabled]:active,
-fieldset[disabled] .btn-xl:active,
-.btn-xl.disabled.active,
-.btn-xl[disabled].active,
-fieldset[disabled] .btn-xl.active {
-    border-color: #fed136;
-    background-color: #fed136;
-}
 
 .btn-xl .badge {
     color: #fed136;
     background-color: #fff;
 }
 
-/*#bottom-btn{
-  border: 3px solid white;
-  color:white;
-}*/
+#bottom-btn{
+  border: 3px solid #DCF763;
+  color:#DCF763;
+}
 
 #bottom-btn:hover{
   background-color: transparent;
@@ -288,9 +274,9 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: white;
-     text-shadow: 1px 1px 1px black;
+     /*text-shadow: 1px 1px 1px black;*/
     background-attachment: scroll;
-    background-image: url(https://lh3.googleusercontent.com/nLQHQvImLYVYTPE37DFAjftGY-A8VlBXiQEYSB5Q3Z-sBhXLM0G04Z_cv_3EG-v74GZEydn0R_Mb6Zb7EYmVBQx5TOR4siFjxcXWRk7uugYvV3at6Rms6YbPS64o_qsrRbhIe6W1V3LK-nSOMmD_6x5qKxyvJsBzCFcUzwN7D6QsI7ZbDizbWuVC6r92NmdRudcvZomzCdUr3sR_hANPSFg0xKqtUJ160W5d4lbunC7KSMJHhRpO19YNWWS9qMz9OefX4VJoRr8jGdOldePojJgu6zRALI1mVOD96EkiWFAQu5DjVsx5RUlMOvvkl99H819_0NY-ySGQnSVI-GfQFUWM1A0_Kt8vP3aLkNasV0H4PgWkePr03F0JK4QfRS8ExuU-_ID1GNCZ-G4ECBnGHuP7uFXWZfQBEcNeO_yJRe9Zg34vZFZFxWl5cmL5tUVP45MFf-S7V-M54RVKOQAJuZYSnI46edu65Qi3I0-Ca8r80cJJ8ZrxSsCNjSpejQdCQLSfkAaxQgH4giffYpy6riUUe1x3cyjCNemNu2h8PA=w1024-h768-no);
+    background-image: url(https://lh3.googleusercontent.com/arJlEc4UtdRQnZcfNXoWJwGqubdD9W0EQRAjIgNlArPzIDUS46N3gckvFvOV2PL7JxCp1T7oeKFLJqcNW0oEr0mUrNeeqWbrQ549vKPyGkY7cLXN2RfQh7jiyACrB9mLZcoqEukB5h6v3BgI9ack5JBSFFA5mItxcwUbo46VP17wGxa-o7BY7osaTvp5AyIxe6XxwYv0u34O4waw9Ef1HQg4pnzdEi2_uHdWqm8O1day1VRfV1NftxW0WFnpteJcJVHsJTmG5EvVJkHUJlyi8WKJZAnS12oBhIaBZu4BLlcQcmAW9YKpQyHyb_9OJx7eojrdiv4KQYVqFBCB-f2eaO11SEVQYvMSM0QJDamhRPH4VwRdfPbzD7gT4Ap2nqK8TJzTgBnTqUIgluJMJIEhQwi5NiEAOQqYSP7pq3xz7phzbCmxY813FTITTwbr0zxTqyYOitRi6hyWT_RSsSABwBD-H8fzsHeWfQ4KZVsAaw50-TdHuKrlGmMEu53cK2py5kUh1r0hfI-EQymX2NLJQyu8Ef7P0ph5cwp_-yrJ9g=w1536-h1024-no);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -305,7 +291,7 @@ header .intro-text {
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
+    margin-bottom: 100px;
     font-family:  code-light,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: italic;
@@ -316,7 +302,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: code-light,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 100px;
+    font-size: 3em;
     font-weight: 700;
     line-height: 50px;
 }
@@ -358,12 +344,10 @@ header .intro-text .intro-heading {
         font-weight: 700;
         line-height: 75px;
     }
-  }
 
-  #bf{
-    color: black;
-     text-shadow: 1px 1px 1px #DCF763
-  }
+    #mid-icon{
+      color: #DCF763;
+}
 
 section {
     padding: 100px 0;
@@ -373,6 +357,9 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
+    font-family: code-light;
+    color: #DCF763;
+    text-shadow: 1px 1px black;
 }
 
 section h3.section-subheading {
@@ -382,6 +369,26 @@ section h3.section-subheading {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
+    color: white;
+
+}
+
+.donate{
+  height:500px;
+  text-align: center;
+  font-family: code-bold;
+}
+
+#btn-d{
+  height:3em;
+  width:6em;
+  border: 2px solid #DCF763;
+  color: #DCF763;
+  border-radius: 5px;
+  background-color: black;
+  margin-top: 5em;
+  display: block;
+  margin-left: 45%;
 }
 
 @media(min-width:768px) {
@@ -393,6 +400,7 @@ section h3.section-subheading {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
+    color:white;
 }
 
 #portfolio .portfolio-item {
@@ -447,7 +455,7 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: #fff;
+    background-color: #DCF763;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -464,6 +472,13 @@ section h3.section-subheading {
 
 #portfolio * {
     z-index: 2;
+}
+
+.search-p{
+  margin-left: 500px;
+  height: 500px;
+  display: inline-block;
+  font-family:code-bold;
 }
 
 @media(min-width:767px) {
@@ -492,19 +507,18 @@ section h3.section-subheading {
     margin-top: 0;
 }
 
-aside.clients img {
-    margin: 50px auto;
-}
 
 section#contact {
-    background-color: #222;
-    background-image: url(../img/map-image.png);
+    /*background-color: black;*/
+    /*background-image: url(https://static.pexels.com/photos/370/lights-night-dark-abstract-medium.jpeg);*/
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
 }
 
 section#contact .section-heading {
-    color: #fff;
+    color: #DCF763;
 }
 
 section#contact .form-group {
