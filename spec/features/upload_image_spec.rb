@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "uploading pictures to a pet" do
-  
+
   before(:each) do
      visit'/admins/sign_up'
      fill_in('Email', with: 'Foo@bar.com')
@@ -15,7 +15,8 @@ describe "uploading pictures to a pet" do
     fill_in('Name', :with => "Fido")
     attach_file('photos[]', fixture_image_path)
     select("Dog", :from => "Species")
-    click_button 'Create Pet'
+
+    click_button 'Save Pet'
 
   end
 

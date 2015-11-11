@@ -8,7 +8,7 @@
 <% if @pet.pet_images.first.nil? %>
   <%= image_tag "comingsoon.jpg" %>
 <% end %>
-  
+
 <% @pet.pet_images.each do |pet_image| %>
   <%= image_tag(pet_image.photo.url(:medium)) %>
 <% end %>
@@ -41,6 +41,11 @@
       <% else %>
       <%= "No breed known" %>
     <% end %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pet.description %>
+</p>
 
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>
