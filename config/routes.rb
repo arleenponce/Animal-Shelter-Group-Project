@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "home#index"
   match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
   resources :pet_images
   resources :pets
