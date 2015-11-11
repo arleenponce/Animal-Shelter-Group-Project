@@ -33,11 +33,14 @@
   <strong>Weight:</strong>
   <%= @pet.weight %>
 </p>
-
-<p>
-  <strong>Breed:</strong>
-  <%= @pet.breed %>
-</p>
+<p><strong>Breed:</strong> 
+  <% if !@pet.breeds.empty? %>
+      <% @pet.breeds.each do |b| %>
+        <%= b.breed_name %>
+      <% end %>
+      <% else %>
+      <%= "No breed known" %>
+    <% end %></p>
 
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>

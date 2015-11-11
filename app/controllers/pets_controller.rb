@@ -26,6 +26,8 @@ class PetsController < ApplicationController
   # POST /pets.json
   def create
     @pet = Pet.new(pet_params)
+    add_breed
+    @pet.breeds << @breeds
 
     respond_to do |format|
       if @pet.save
@@ -42,6 +44,9 @@ class PetsController < ApplicationController
   # PATCH/PUT /pets/1
   # PATCH/PUT /pets/1.json
   def update
+    add_breed
+    @pet.breeds << @breeds
+
     respond_to do |format|
       if @pet.update(pet_params)
         @pet = multiple_photos(@pet)
@@ -65,7 +70,6 @@ class PetsController < ApplicationController
     end
   end
 
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pet
@@ -73,8 +77,11 @@ class PetsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # def pet_params
+    #   params.permit(:pet)
+    # end
     def pet_params
-      params.require(:pet).permit(:name, :species, :gender, :age, :weight, :breed)
+      params.require(:pet).permit(:name, :species, :gender, :age, :weight)
     end
 
     def multiple_photos(pet)
@@ -84,5 +91,15 @@ class PetsController < ApplicationController
         end
       end
       return pet
+    end
+
+    # Possible option for adding breeds to pets, as adapted from Recipes Controller
+    # would be called within the create/edit method, probably
+    def add_breed
+      @breeds = []
+      # Check to see if the breed's name exists yet, and if so, use that breed id
+      breed_name_string_from_user = params[:breed][:breed_name]
+      @breed = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
+      @breeds << @breed
     end
 end

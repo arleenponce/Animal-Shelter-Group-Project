@@ -46,15 +46,15 @@
   <%= f.label :weight %><br>
   <%= f.number_field :weight %>
 </div>
-<div class="field">
-  <%= f.label :breed %><br>
-  <%= f.text_field :breed %>
+<div class= "field">
+  <label for="breed_name">Breed</label><br>
+  <input type="text" name="breed[breed_name]" id="breed_name"/>
 </div>
 
 <p>Note: Images may take a few moments to upload. Please do not click button more than once.</p>
 
-<div class="actions">
-  <%= f.submit %>
+<div class ="actions">
+  <input type ="submit" name="commit" value="Save Pet"/>
 </div>
 
 <% end %>

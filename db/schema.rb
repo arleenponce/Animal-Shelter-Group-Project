@@ -35,6 +35,20 @@ ActiveRecord::Schema.define(version: 20151110235019) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "breeds", force: :cascade do |t|
+    t.string   "breed_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "breeds_pets", id: false, force: :cascade do |t|
+    t.integer "breed_id"
+    t.integer "pet_id"
+  end
+
+  add_index "breeds_pets", ["breed_id"], name: "index_breeds_pets_on_breed_id", using: :btree
+  add_index "breeds_pets", ["pet_id"], name: "index_breeds_pets_on_pet_id", using: :btree
+
   create_table "pet_images", force: :cascade do |t|
     t.integer  "pet_id"
     t.datetime "created_at",         null: false
@@ -51,9 +65,10 @@ ActiveRecord::Schema.define(version: 20151110235019) do
     t.string   "gender"
     t.string   "age"
     t.integer  "weight"
-    t.string   "breed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "breeds_pets", "breeds"
+  add_foreign_key "breeds_pets", "pets"
 end

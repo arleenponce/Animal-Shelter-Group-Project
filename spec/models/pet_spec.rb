@@ -40,6 +40,7 @@ describe Pet do
         pet.valid?
         expect(pet.errors[:gender]).to include("can't be blank")
     end
+
     it "is invalid without an age" do
       pet = Pet.new(
         name: 'Killer',
@@ -75,4 +76,29 @@ describe Pet do
 
       expect(aDog.pet_images.to_a).to be_kind_of Array
     end
+
+    it "may be multiple breeds" do
+      doggy1 = Pet.new(
+        name: 'Killer',
+        species: 'dog',
+        age: '2',
+        weight: '70')
+      doggy2 = Pet.new(
+          name: 'Killer',
+          species: 'dog',
+          age: '2',
+          weight: '70')
+
+      breed1 = Breed.create(breed_name: "Boxer")
+      breed2 = Breed.create(breed_name: "Poodle")
+      doggy1.breeds << breed1
+      doggy1.breeds << breed2
+      doggy1.save
+      doggy2.breeds << breed1
+      doggy2.save
+
+      expect(doggy1.breeds).to match_array([breed1, breed2])
+      expect(doggy2.breeds).to match_array([breed1])
+    end
+  end
 end
