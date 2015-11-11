@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+
+
   devise_for :admins, :controllers => { 'registrations#destroy' => 'registrations#destroy' }
 
   root to: "pets#index"
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
 
   resources :pet_images
   resources :breeds
+
+  root :to => 'home#index'
+
   resources :pets
 
   # The priority is based upon order of creation: first created -> highest priority.
