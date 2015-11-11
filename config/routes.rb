@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  
+  devise_for :admins, :controllers => { 'registrations#destroy' => 'registrations#destroy' }
+
+  root to: "pets#index"
+
   match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
+  
   resources :pet_images
   resources :pets
   # The priority is based upon order of creation: first created -> highest priority.
