@@ -66,17 +66,7 @@ class PetsController < ApplicationController
     end
   end
 
-  # Possible option for adding breeds to pets, as adapted from Recipes Controller
-  # would be called within the create/edit method, probably
-    def add_breed
-      # @pet = Pet.find(params[:id])
-      @breeds = []
-      # Check to see if the breed's name exists yet, and if so, use that breed id
-      breed_name_string_from_user = params[:breed][:name]
-      @breed = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
-      @breeds << @breed
-      # render 'show.html.erb'
-    end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -85,10 +75,21 @@ class PetsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # def pet_params
+    #   params.permit(:pet)
+    # end
     def pet_params
-      params.require(:pet).permit(:name, :species, :gender, :age, :weight, :breed)
+      params.require(:pet).permit(:name, :species, :gender, :age, :weight)
     end
 
-
+    # Possible option for adding breeds to pets, as adapted from Recipes Controller
+    # would be called within the create/edit method, probably
+    def add_breed
+      @breeds = []
+      # Check to see if the breed's name exists yet, and if so, use that breed id
+      breed_name_string_from_user = params[:breed][:breed_name]
+      @breed = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
+      @breeds << @breed
+    end
 
 end

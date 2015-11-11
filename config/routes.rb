@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  match('pets/new/add_breed', {:via => :patch, :to => "pets#add_breed"})
+  match('pets/new/add_breed', {:via => :get, :to => "pets#new"})
+  match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#create"})
+  match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#update"})
   match('pets', {:via => :patch, :to => "pets#create"})
 
   resources :breeds

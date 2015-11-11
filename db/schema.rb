@@ -40,4 +40,6 @@ ActiveRecord::Schema.define(version: 20151109195427) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "breeds_pets", "breeds"
+  add_foreign_key "breeds_pets", "pets"
 end

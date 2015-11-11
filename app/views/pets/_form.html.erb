@@ -37,18 +37,17 @@
 
 
 
-  <form action="/pets/new/add_breed" method= "post">
-    <input name="_method" type="hidden" value="patch">
-  <div class= "field">
-    <label for="breed_name">Breed</label><br>
-    <input type="text" name="breed[name]" id="breed_name"/>
-  </div>
-  <div class ="actions">
-    <input type ="submit" name="commit" value="Create Pet"/>
-  </div>
-</form>
+<!-- <div class="actions">
+  <%= f.submit %>
+</div> -->
 
+<div class= "field">
+  <label for="breed_name">Breed</label><br>
+  <input type="text" name="breed[breed_name]" id="breed_name"/>
+</div>
 
-
+<div class ="actions">
+  <input type ="submit" name="commit" value="Save Pet"/>
+</div>
 
 <% end %>

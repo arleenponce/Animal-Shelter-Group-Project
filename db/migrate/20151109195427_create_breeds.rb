@@ -12,5 +12,8 @@ class CreateBreeds < ActiveRecord::Migration
 
     remove_column :pets, :breed, :string
 
+    add_foreign_key :breeds_pets, :breeds
+    add_foreign_key :breeds_pets, :pets
+
   end
 end
