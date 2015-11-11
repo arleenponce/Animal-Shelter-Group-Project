@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 describe "the process to add an animal" do
+
+  before(:each) do
+     visit'/admins/sign_up'
+     fill_in('Email', with: 'Foo@bar.com')
+     fill_in('Password', with: '12345678')
+     fill_in('Password confirmation', with: '12345678')
+     click_button 'Sign up'
+   end
+
   it "saves information input into name field" do
     visit '/pets/new'
     fill_in "Name", :with => 'Fido'
