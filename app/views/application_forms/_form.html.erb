@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<%= t 'errors.messages.invalid_zipcode' %>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -36,7 +38,7 @@
     <%= f.select :state, options_for_select(us_states, "CA") %>
   </div>
   <div class="field">
-    <%= f.label :zip %><br>
+    <%= f.label :zip, "Zip Code" %><br>
     <%= f.number_field :zip %>
   </div>
   <div class="field">
