@@ -24,4 +24,4 @@ en:
 en:
   errors:
     messages:
-      invalid_zipcode: "Code must be valid."
+      invalid_zipcode: "Code must be valid"

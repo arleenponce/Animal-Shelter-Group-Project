@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  
-  resources :application_forms
+
   devise_for :admins, :controllers => { 'registrations#destroy' => 'registrations#destroy' }
 
   root to: "pets#index"
@@ -9,9 +8,8 @@ Rails.application.routes.draw do
   match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#create"})
   match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#update"})
   match('pets', {:via => :patch, :to => "pets#create"})
-
-  match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
-
+  
+  resources :application_forms
   resources :pet_images
   resources :breeds
   resources :pets

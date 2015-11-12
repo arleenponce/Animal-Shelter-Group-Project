@@ -1,5 +1,6 @@
 class ApplicationFormsController < ApplicationController
   before_action :set_application_form, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_admin!, except: [:create, :show, :new, :edit]
 
   # GET /application_forms
   # GET /application_forms.json
