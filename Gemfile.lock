@@ -99,6 +99,10 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.3)
+    phony (2.15.8)
+    phony_rails (0.12.10)
+      activesupport (>= 3.0)
+      phony (~> 2.12)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -196,6 +200,7 @@ DEPENDENCIES
   jquery-rails
   paperclip
   pg
+  phony_rails
   rails (= 4.2.4)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
