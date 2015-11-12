@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
+  root :to => 'home#index'
+
   devise_for :admins
-
-  root to: "pets#index"
-
 
   match('pets/new/add_breed', {:via => :get, :to => "pets#new"})
   match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#create"})
@@ -12,13 +11,9 @@ Rails.application.routes.draw do
 
   match('pets', {:via => :patch, :to => "pets#create"})
 
-  match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
-
+  resources :application_forms
   resources :pet_images
   resources :breeds
-
-  root :to => 'home#index'
-
   resources :pets
 
   # The priority is based upon order of creation: first created -> highest priority.

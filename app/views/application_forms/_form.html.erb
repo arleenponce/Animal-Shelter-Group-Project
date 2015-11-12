@@ -1,0 +1,49 @@
+<%= form_for(@application_form) do |f| %>
+  <% if @application_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application_form.errors.count, "error") %> prohibited this application_form from being saved:</h2>
+
+      <ul>
+      <% @application_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.telephone_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address %><br>
+    <%= f.text_field :street_address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.select :state, options_for_select(us_states, "CA") %>
+  </div>
+  <div class="field">
+    <%= f.label :zip, "Zip Code" %><br>
+    <%= f.number_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :information, "Please describe what type of animal you are looking for. If you see an animal you like on our webpage, please also include their name, species and breed." %><br>
+    <%= f.text_area :information, size: "50x10" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
