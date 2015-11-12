@@ -1,0 +1,42 @@
+<h1>Find your perfect pet!</h1>
+
+
+
+<p>Use the first field to search by pet name, gender, animal type, or age. Use the second field to search by breed. Or, use both to find all pets matching the first criteria and the second criteria: <em> ie, all female dogs and all boxers (not all female boxers)</em>.</p>
+<form action="/pets/search_pets" method="get">
+  <div class="field">
+    <label for="pet_search_string">Find pet</label>
+    <input id="pet_search_string" type="text" name="pet_search_string"></input>
+  </div>
+  <div class="field">
+    <label for="breed_search_string">Search by breed</label>
+    <input type="text" name="breed_search_string" id="breed_search_string"/>
+  </div>
+  <!-- <div class="field">
+    <label for="gender_search_string">Search by gender</label>
+    <select name="gender_search_string" id="gender_search_string">
+      <option selected="selected" disabled>Pick a gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  </div> -->
+  <div class="actions">
+    <input type="submit" value="Search"></input>
+  </div>
+</form>
+
+
+<hr/>
+
+<% if !@searched_pet.nil? %>
+  <% if @searched_pet.empty? %>
+  <p>No pets found&mdash;try another search!</p>
+  <% else %>
+    <h3>Pets Found:</h3>
+    <% @searched_pet.each do |pet| %>
+      <p id="search"><%= link_to(pet.name, pet) %></p>
+    <% end %>
+  <% end %>
+<% end %>
+
+<p><a href="/">See all pets</a></p>
