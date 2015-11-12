@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  devise_for :admins, :controllers => { 'registrations#destroy' => 'registrations#destroy' }
+  devise_for :admins
 
   root to: "pets#index"
 

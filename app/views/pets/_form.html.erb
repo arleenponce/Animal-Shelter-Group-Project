@@ -1,3 +1,5 @@
+<%= javascript_include_tag('printbreed.js') %>
+
 <%= form_for @pet, html: { multipart: true } do |f| %>
   <% if @pet.errors.any? %>
     <div id="error_explanation">
@@ -34,7 +36,7 @@
   <div class="field">
      <%= f.label :gender %><br>
      <%= f.label :gender, "Male" %>
-     <%= f.radio_button :gender, 'male' %>
+     <%= f.radio_button :gender, 'male', :class => "button" %>
      <%= f.label :gender, "Female" %>
      <%= f.radio_button :gender, 'female' %>
   </div>
@@ -49,6 +51,12 @@
 <div class= "field">
   <label for="breed_name">Breed</label><br>
   <input type="text" name="breed[breed_name]" id="breed_name"/>
+  <input type ="button" name="add_breed" value="Add Breed" onclick="list_breed()"/>
+</div>
+<div>
+  <ul id= "breed_output">
+
+  </ul>
 </div>
 
 <p>Note: Images may take a few moments to upload. Please do not click button more than once.</p>
