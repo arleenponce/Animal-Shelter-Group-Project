@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy, :pet_image]
-  before_filter :authenticate_admin!, except: [:index, :show]
+  before_filter :authenticate_admin!, except: [:index, :show, :search_pets]
   # GET /pets
   # GET /pets.json
   def index
@@ -68,6 +68,53 @@ class PetsController < ApplicationController
       format.html { redirect_to pets_url, notice: 'Pet was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search_pets
+    @searched_pet = []
+
+    if !params[:pet_search_string].nil? && !params[:pet_search_string].empty? && !params[:breed_search_string].nil? && !params[:breed_search_string].empty?
+      all_pets = []
+
+      pet_search_string = params[:pet_search_string].strip
+      found_pets = Pet.search(pet_search_string)
+      all_pets << found_pets
+
+      breed_search_string = params[:breed_search_string].strip
+      breed_found = Breed.search(breed_search_string)
+      pet_collection = []
+      breed_found.each { |b| pet_collection << b.pets.to_a }
+      flat_breed_pets = pet_collection.flatten
+      all_pets << flat_breed_pets
+      @searched_pet = all_pets.flatten
+
+    elsif !params[:pet_search_string].nil? && !params[:pet_search_string].empty?
+      pet_search_string = params[:pet_search_string].strip
+      @searched_pet = Pet.search(pet_search_string)
+    elsif !params[:breed_search_string].nil? && !params[:breed_search_string].empty?
+      breed_search_string = params[:breed_search_string].strip
+      breed_found = Breed.search(breed_search_string)
+      pet_collection = []
+      breed_found.each { |b| pet_collection << b.pets.to_a }
+      @searched_pet = pet_collection.flatten
+        # returns active record collection, probably with only one record (but maybe not!)
+        # We need to make each of these breeds accessible, and then get out each of their pets, which will then be passed to an array
+        # This array (of pet objects) will then be each printed on the search view, with their name and link
+    else
+      @searched_pet = []
+    end
+
+    # if !params[:gender_search_string].nil? && !params[:gender_search_string].empty?
+    #   gender_search_string = params[:gender_search_string].strip
+    #   @searched_pet = Pet.where(
+    #   "gender == '%#{gender_search_string}%'"
+    #   )
+    # else
+    #   @searched_pet = []
+    # end
+
+    render 'search.html.erb'
+
   end
 
   private
