@@ -141,7 +141,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
     border-color: black;
-    color: #DCF763;
+    color: #72BDA3;
     background-color: black;
     opacity: .8;
 }
@@ -159,13 +159,13 @@ fieldset[disabled] .btn-primary.active {
 }
 
 #bottom-btn{
-  border: 3px solid #DCF763;
-  color:#DCF763;
+  border: 3px solid #72BDA3;
+  color:#72BDA3;
 }
 
 #bottom-btn:hover{
   background-color: transparent;
-  border: 2px solid #DCF763;
+  border: 2px solid #72BDA3;
 }
 
 .navbar-default {
@@ -190,7 +190,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .navbar-default .navbar-brand:hover{
-  color:#DCF763;
+  color:#72BDA3;
 }
 
 .navbar-default .navbar-collapse {
@@ -222,7 +222,7 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #DCF763;
+    color: #72BDA3;
     border: 1px solid black;
     border-radius: 2px;
     background-color: black;
@@ -231,13 +231,13 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: black;
-    background-color:  #DCF763;
+    background-color:  #72BDA3;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: black;
-    background-color: #DCF763;
+    background-color: #72BDA3;
 }
 
 @media(min-width:768px) {
@@ -309,12 +309,12 @@ header .intro-text .intro-heading {
 
 @font-face {
     font-family: code-light;
-    src: url(CODE Light.otf);
+    src: url(CODE Light);
 }
 
 @font-face {
     font-family: code-bold;
-    src: url(CODE Bold.otf);
+    src: url(CODE Bold);
 }
 
 @font-face {
@@ -346,7 +346,7 @@ header .intro-text .intro-heading {
     }
 
     #mid-icon{
-      color: #DCF763;
+      color: #72BDA3;
 }
 
 section {
@@ -358,7 +358,7 @@ section h2.section-heading {
     margin-bottom: 15px;
     font-size: 40px;
     font-family: code-light;
-    color: #DCF763;
+    color: #72BDA3;
     text-shadow: 1px 1px black;
 }
 
@@ -382,8 +382,8 @@ section h3.section-subheading {
 #btn-d{
   height:3em;
   width:6em;
-  border: 2px solid #DCF763;
-  color: #DCF763;
+  border: 2px solid #72BDA3;
+  color: #72BDA3;
   border-radius: 5px;
   background-color: black;
   margin-top: 5em;
@@ -455,7 +455,7 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: #DCF763;
+    background-color: #72BDA3;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -518,7 +518,7 @@ section#contact {
 }
 
 section#contact .section-heading {
-    color: #DCF763;
+    color: #72BDA3;
 }
 
 section#contact .form-group {

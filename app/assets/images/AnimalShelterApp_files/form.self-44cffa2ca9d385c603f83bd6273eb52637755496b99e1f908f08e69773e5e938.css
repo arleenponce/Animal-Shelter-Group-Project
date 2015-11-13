@@ -1,0 +1,52 @@
+.test {
+background-color: black;
+}
+
+div {
+  color:white;
+  font-family: code-light;
+}
+input[type="text"], textarea{
+  background-color:#72BDA3;
+
+}
+
+input[type="select"], area{
+  background-color:#72BDA3;
+
+}
+
+
+
+
+#eP{
+  color:#72BDA3;
+  font-family: code-light;
+}
+
+#save-btn{
+  background-color: #72BDA3;
+  height:5em;
+  width: 10em;
+  font-family: code-bold;
+  border-radius: 3px;
+}
+
+.note{
+  color:white;
+  font-family: code-light;
+}
+
+#user_nav:hover{
+  color: blue;
+}
+
+@font-face {
+    font-family: code-light;
+    src: url(CODE Light);
+}
+
+@font-face {
+    font-family: code-bold;
+    src: url(CODE Bold);
+}

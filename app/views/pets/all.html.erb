@@ -1,0 +1,49 @@
+<!-- <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/form.css"> -->
+<body class="petMainBody">
+
+<h1 id="petlist">Meet our furry friends!</h1>
+
+<table>
+<thead>
+  <tr class="tableHead">
+    <th>Name</th>
+    <th>Photo</th>
+    <th>Species<span class="sParen">|</span></th>
+    <th>Gender<span class="sParen">|</span></th>
+    <th>Age<span class="sParen">|</span></th>
+    <th>Weight<span class="sParen">|</span></th>
+    <th>Breed<span class="sParen">(s)</span></th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+
+<tbody class="petsMain">
+  <% @pets.each do |pet| %>
+    <tr>
+      <td class="petName"><%= link_to pet.name , pet %></td>
+      <% if pet.pet_images.first.nil? %>
+        <td>No Image uploaded</td>
+        <% else %>
+          <td><%= image_tag(pet.pet_images.first.photo.url(:thumb)) %></td>
+      <% end %>
+      <td><%= pet.species %></td>
+      <td><%= pet.gender %></td>
+      <td><%= pet.age %></td>
+      <td><%= pet.weight %></td>
+
+      <td><% if !pet.breeds.empty? %>
+            <% pet.breeds.each do |b| %>
+              <%= b.breed_name %>
+            <% end %>
+            <% else %>
+            <%= "No breed known" %>
+          <% end %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<br>
+
+
+</body>

@@ -1,24 +1,33 @@
-<p id="notice"><%= notice %></p>
+  <!-- <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/form.css"> -->
+<body class="petMainBody">
+
 
 <a href="pets/search_pets">Search for your perfect pet</a>
 
 <h1>Listing Pets</h1>
 
+  <p id="notice"><%= notice %></p>
+
+  <%= render 'login' %>
+
+<h1 id="petlist">Meet our furry friends!</h1>
+
+
 <table>
   <thead>
-    <tr>
+    <tr class="tableHead">
       <th>Name</th>
       <th>Photo</th>
-      <th>Species</th>
-      <th>Gender</th>
-      <th>Age</th>
-      <th>Weight</th>
-      <th>Breed(s)</th>
+      <th>Species<span class="sParen">|</span></th>
+      <th>Gender<span class="sParen">|</span></th>
+      <th>Age<span class="sParen">|</span></th>
+      <th>Weight<span class="sParen">|</span></th>
+      <th>Breed<span class="sParen">(s)</span></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="petsMain">
     <% @pets.each do |pet| %>
       <tr>
         <td><%= pet.name %></td>
@@ -39,7 +48,7 @@
               <% else %>
               <%= "No breed known" %>
             <% end %></td>
-        <td><%= link_to 'Show', pet %></td>
+        <td id="linkto"><%= link_to 'Show', pet %></td>
         <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
       </tr>
     <% end %>
@@ -49,3 +58,6 @@
 <br>
 
 <%= link_to 'New Pet', new_pet_path %>
+
+
+</body>

@@ -1,6 +1,10 @@
+<link rel="stylesheet" type="text/css" href="form.css">
+
+<body class="profileBG">
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="profile">
   <strong>Name:</strong>
   <%= @pet.name %>
 </p>
@@ -14,26 +18,26 @@
 <% end %>
 
 
-<p>
+<p class="profile">
   <strong>Species:</strong>
   <%= @pet.species %>
 </p>
 
-<p>
+<p class="profile">
   <strong>Gender:</strong>
   <%= @pet.gender %>
 </p>
 
-<p>
+<p class="profile">
   <strong>Age:</strong>
   <%= @pet.age %>
 </p>
 
-<p>
+<p class="profile">
   <strong>Weight:</strong>
   <%= @pet.weight %>
 </p>
-<p><strong>Breed:</strong> 
+<p><strong>Breed:</strong>
   <% if !@pet.breeds.empty? %>
       <% @pet.breeds.each do |b| %>
         <%= b.breed_name %>
@@ -42,10 +46,11 @@
       <%= "No breed known" %>
     <% end %></p>
 
-<p>
+<p class="profile">
   <strong>Description:</strong>
   <%= @pet.description %>
 </p>
 
-<%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
+<a href="/pets/all">Back</a>
+
+</body>

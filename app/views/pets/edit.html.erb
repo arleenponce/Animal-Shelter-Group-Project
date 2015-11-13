@@ -1,7 +1,13 @@
-<h1>Editing Pet</h1>
+<head>
+<link rel="stylesheet" type="text/css" href="../../assets/stylesheets/form.css">
+</head>
+
+
+<h1 id="eP">Edit Pet Information/./.</h1>
+<%= render 'login' %>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @pet %> |
-<%= link_to 'Back', pets_path %>
+<%= link_to 'Back', pets_path, :style=>"color: orange;" %>
 <%= link_to 'Destroy', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>

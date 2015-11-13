@@ -48,19 +48,6 @@ ActiveRecord::Schema.define(version: 20151111234107) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "applications", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.integer  "zip"
-    t.text     "information"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "breeds", force: :cascade do |t|
     t.string   "breed_name"
     t.datetime "created_at", null: false
