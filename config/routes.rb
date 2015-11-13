@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
 
-  devise_for :admins, :controllers => { 'registrations#destroy' => 'registrations#destroy' }
+  devise_for :admins
 
-  root to: "pets#index"
-
+  # root to: "pets#index"
+  match('pets/all', {:via => :get, :to => "pets#all"})
   match('pets/new/add_breed', {:via => :get, :to => "pets#new"})
   match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#create"})
   match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#update"})

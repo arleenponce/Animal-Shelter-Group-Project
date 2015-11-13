@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:3000/pets/1/edit -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>AnimalShelterApp</title>
+  <link rel="stylesheet" type="text/css" href="./AnimalShelterApp_files/form.css">
+
+  <link rel="stylesheet" media="all" href="./AnimalShelterApp_files/breeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./AnimalShelterApp_files/form.self-44cffa2ca9d385c603f83bd6273eb52637755496b99e1f908f08e69773e5e938.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./AnimalShelterApp_files/pet_images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./AnimalShelterApp_files/pets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./AnimalShelterApp_files/scaffolds.self-b85153af71de4f5d6e598f4408612390e99485b4b4934e109fc499d05419ca7c.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./AnimalShelterApp_files/application.self-13ac5ab5baf477c7f10766f9451b8f97944dce6b80a41e3e99a68ad5107d954c.css" data-turbolinks-track="true">
+  <script src="./AnimalShelterApp_files/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js" data-turbolinks-track="true"></script>
+<script src="./AnimalShelterApp_files/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js" data-turbolinks-track="true"></script>
+<script src="./AnimalShelterApp_files/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js" data-turbolinks-track="true"></script>
+<script src="./AnimalShelterApp_files/breeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./AnimalShelterApp_files/pet_images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./AnimalShelterApp_files/pets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./AnimalShelterApp_files/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="eqPhYCDZTGMAJIafDk5ArO02oz9EjcaYEgRs8q1PDxp5kWjXINNjdDJRaTLY8GrO/PDdU2izd+Bn9tEYCtU2mw==">
+</head>
+<body class="test">
+
+	<div id="user_nav">
+       Logged in as <strong>r.dennett3@gmail.com</strong>
+       <a style="color:white" href="http://localhost:3000/admins/edit">Edit Profile</a> |
+       <a rel="nofollow" data-method="delete" href="http://localhost:3000/admins/sign_out">Logout</a>
+   </div>
+
+
+
+<link rel="stylesheet" type="text/css" href="./AnimalShelterApp_files/form.css">
+
+
+
+<h1 id="eP">Editing Pet/./.</h1>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./AnimalShelterApp_files/form.css">
+
+
+
+
+<form class="edit_pet" id="edit_pet_1" enctype="multipart/form-data" action="http://localhost:3000/pets/1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="eqPhYCDZTGMAJIafDk5ArO02oz9EjcaYEgRs8q1PDxp5kWjXINNjdDJRaTLY8GrO/PDdU2izd+Bn9tEYCtU2mw==">
+
+<div class="field">
+  <label for="pet_name">Name</label><br>
+  <input type="text" value="Tiger" name="pet[name]" id="pet_name">
+</div>
+
+
+<div class="field">
+  <label for="pet_Photo">Photo</label>
+  <p class="note">To upload multiple images, select all images that you want to upload by holding Command (Mac) or Control (PC).</p>
+  <input type="file" name="photos[]" id="photos_" multiple="multiple">
+</div>
+
+<div class="field">
+  <label for="pet_species">Species</label><br>
+  <select name="pet[species]" id="pet_species"><option value="dog">Dog</option>
+<option selected="selected" value="cat">Cat</option>
+<option value="other">Other</option></select>
+</div>
+  <div class="field">
+     <label for="pet_gender">Gender</label><br>
+     <label for="pet_gender">Male</label>
+     <input type="radio" value="male" name="pet[gender]" id="pet_gender_male">
+     <label for="pet_gender">Female</label>
+     <input type="radio" value="female" checked="checked" name="pet[gender]" id="pet_gender_female">
+  </div>
+<div class="field">
+  <label for="pet_age">Age</label><br>
+  <input type="text" value="14" name="pet[age]" id="pet_age">
+</div>
+<div class="field">
+  <label for="pet_weight">Weight</label><br>
+  <input type="number" value="15" name="pet[weight]" id="pet_weight">
+</div>
+<div class="field">
+  <label for="breed_name">Breed</label><br>
+  <input type="text" name="breed[breed_name]" id="breed_name">
+</div>
+
+<div class="field">
+  <label for="pet_description">Description</label><br>
+  <textarea name="pet[description]" id="pet_description" cols="50" rows="10"></textarea>
+</div>
+
+<p class="note">Note: Images may take a few moments to upload. Please do not click button more than once.</p>
+
+<div class="actions">
+  <input type="submit" name="commit" value="Save Pet" id="save-btn">
+</div>
+
+</form>
+
+
+<a class="links" href="http://localhost:3000/pets/1">Show</a> |
+<a class="links" href="http://localhost:3000/pets">Back</a>
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/pets/1">Destroy</a>
+
+
+
+
+</body></html>

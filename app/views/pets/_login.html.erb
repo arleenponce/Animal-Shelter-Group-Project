@@ -1,0 +1,9 @@
+<div id="user_nav">
+   <% if admin_signed_in? %>
+     Logged in as <strong><%= current_admin.email %></strong>
+     <%= link_to 'Edit Profile', edit_admin_registration_path, style: 'color:white' %> |
+     <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Admin Login", new_admin_session_path %>
+   <% end %>
+ </div>

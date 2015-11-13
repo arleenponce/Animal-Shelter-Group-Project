@@ -11,7 +11,7 @@ body {
 }
 
 .text-muted {
-    color: #DCF763;
+    color: #;
     /*text-shadow: 1px 1px 1px white;*/
 }
 
@@ -137,10 +137,11 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: black;
-    color: #DCF763;
-    background-color: black;
-    opacity: .8;
+    border-color: #632A7B;
+    color: white;
+    /*background-color: black;*/
+    background: #632A7B;
+    /*opacity: .8;*/
 }
 
 .btn-xl:active,
@@ -179,8 +180,8 @@ fieldset[disabled] .btn-xl.active {
 }*/
 
 #bottom-btn:hover{
-  background-color: transparent;
-  border: 2px solid #DCF763;
+  background-color: #632a7b;
+  border: 2px solid #632a7b;
 }
 
 .navbar-default {
@@ -205,7 +206,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand:hover{
-  color:#DCF763;
+  color:#72BDA3;
+  text-shadow: 1px 1px 1px black;
 }
 
 .navbar-default .navbar-collapse {
@@ -232,27 +234,31 @@ fieldset[disabled] .btn-xl.active {
     font-weight: 400;
     letter-spacing: 1px;
     color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #DCF763;
-    border: 1px solid black;
+    color: #632A7B;
+    border: 1px solid #72BDA3;
     border-radius: 2px;
-    background-color: black;
+    background-color: #72BDA3;
+    text-shadow: 1px 1px 1px white;
+    /*background:rgba(255,255,255, 0.3);*/
+
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: black;
-    background-color:  #DCF763;
+    background-color:  #72BDA3;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: black;
-    background-color: #DCF763;
+    background-color: #72BDA3;
 }
 
 @media(min-width:768px) {
@@ -291,13 +297,24 @@ header {
     color: white;
      text-shadow: 1px 1px 1px black;
     background-attachment: scroll;
-    background-image: url(https://lh3.googleusercontent.com/Wph3HL9phyOQkceJ5O2y4b7IyBG4Q3glDLGONr0L3SQEWIyPGCba2evzyeWrz5akbL2FFFPc8ILwQ3YPXicksHt17N4ahLNhWtGr0JnEgAj1GW6NmXORcZ0IoWENcHXfJYwYGNsZT_Ll1_Da-Jcny5GEFE7cvz6ojvul9NrYtSC52P79jpbCu7sNXCofJWs0Yd4lEqqjooeqN6N2cyoKd8Z4hRzDwMJVH2Yl4mvzWd6RR59_MaWdMpH1Qp3pLNksVHA_5cFjz88yvbqqqq2z-7nzdlf0eI2DjQyAYZx20BQdUWMPfajNKF1Xc2q86-nBcfyhrw-_IvnjBz4YzFqF9PCpPTt1Mfy-XjZD4hC99nrZCIjWZmmIhwG0Bk_Hh-YHk-5GKbPhr0bjynsPB5IHgPTw70oarNwrLaV-e_ItkiHEG6ZVwJgmz0pM8hnehDzzi_yhqFmVdLiw3hcbTLZqeQMke1rH6qrGWMLK8RBfJykkhBClZdr2PgqNIFq-FZk6AQ4xuvqwZsM1HkS3e7szvj-3CBrCSJCW6LhraUaosw=w1536-h1024-no);
+    background-image: url(/img/mainpage.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+#admin{
+  font-family: code-light;
+  font-size: 15px;
+}
+
+#admin:hover{
+  color: #632A7B;
+  background-color: transparent;
+  border: transparent;
 }
 
 header .intro-text {
@@ -325,12 +342,12 @@ header .intro-text .intro-heading {
 
 @font-face {
     font-family: code-light;
-    src: url(CODE Light.otf);
+    src: url(CODE Light);
 }
 
 @font-face {
     font-family: code-bold;
-    src: url(CODE Bold.otf);
+    src: url(CODE Bold);
 }
 
 @font-face {
@@ -361,9 +378,11 @@ header .intro-text .intro-heading {
         line-height: 75px;
     }
   }
-
+#services{
+  background-color: #d8cfaf;
+}
 #furFriends{
-  color:#DCF763;
+  color:#72BDA3;
   text-shadow: 1px 1px 1px white;
 }
 
@@ -375,8 +394,16 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
-    color: #DCF763;
-    text-shadow: 1.5px 1.5px 1.5px black;
+    color: #72bda3;
+    text-shadow: 1px 1px 1px white;
+}
+
+#adopt_heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #632a7b;
+    text-shadow: 1px 1px 1px white;
 }
 
 section h3.section-subheading {
@@ -392,7 +419,7 @@ section h3.section-subheading {
 @media(min-width:768px) {
     section {
         padding: 150px 0;
-        color: #DCF763;
+        color: #632a7b;
     }
 }
 
@@ -400,6 +427,10 @@ section h3.section-subheading {
     margin: 15px 0;
     text-transform: none;
     color: white;
+}
+
+#portfolio{
+  background-color: #72bda3;
 }
 
 #portfolio .portfolio-item {
@@ -454,7 +485,7 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: black;
+    background-color: #d8cfaf;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -473,29 +504,61 @@ section h3.section-subheading {
     z-index: 2;
 }
 
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
+.img-responsive{
+  height: 300px;
+  width: 100%;
 }
 
-.btn-d {
+/*view all pets button*/
+
+#viewAll-btn {
     padding: 20px 40px;
-    border: 3px solid #DCF763;
+    border: 3px solid #632a7b;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: black;
+    color: #632a7b;
     background-color: transparent;
-    margin-left: 25em;
+    margin-left: 40%;
+}
+
+#viewAll-btn:hover{
+  background-color: #632a7b;
+  border: 3px solid #632a7b;
+  color: white;
+
+}
+
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+/*donation ghost button*/
+.btn-d {
+    padding: 20px 40px;
+    border: 3px solid #72bda3;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #72bda3;
+    background-color: transparent;
+    margin-left: 36%;
     margin-right: auto;
 }
 
 .btn-d:hover{
-  background-color: #DCF763;
-  color:black;
+  background-color: #72bda3;
+  color:white;
+  border:3px solid #632A7B;
+}
+
+.bg-light-gray{
+  background-color: #632a7b;
 }
 
 section#contact {
@@ -507,7 +570,7 @@ section#contact {
 
 section#contact .section-heading {
     color: #fff;
-    text-shadow: 1.5px 1.5px 1.5px #DCF763;
+    text-shadow: 1.5px 1.5px 1.5px #72BDA3;
 }
 
 section#contact .form-group {
@@ -550,7 +613,7 @@ section#contact::-moz-placeholder {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-    color: #DCF763  ;
+    color: #72BDA3  ;
 }
 
 section#contact:-ms-input-placeholder {
@@ -574,7 +637,7 @@ footer span.copyright {
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
-    color: #DCF763;
+    color: #72BDA3;
 }
 
 footer ul.quicklinks {
@@ -597,7 +660,7 @@ ul.social-buttons li a {
     font-size: 20px;
     line-height: 40px;
     outline: 0;
-    color: #DCF763;
+    color: #72BDA3;
     background-color: #222;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;

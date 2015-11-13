@@ -1,11 +1,16 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy, :pet_image]
-  before_filter :authenticate_admin!, except: [:index, :show]
+  before_filter :authenticate_admin!, except: [:index, :show, :all]
   # GET /pets
   # GET /pets.json
   def index
     @pets = Pet.all
   end
+
+  def all
+    @pets = Pet.all
+  end
+
 
   # GET /pets/1
   # GET /pets/1.json

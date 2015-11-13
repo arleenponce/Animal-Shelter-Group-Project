@@ -1,3 +1,11 @@
+
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../assets/stylesheets/form.css">
+</head>
+
+
+<body class="test">
 <%= form_for @pet, html: { multipart: true } do |f| %>
   <% if @pet.errors.any? %>
     <div id="error_explanation">
@@ -23,18 +31,18 @@
 
 <div class="field">
   <%= f.label :Photo %>
-  <p>To upload multiple images, select all images that you want to upload by holding Command (Mac) or Control (PC).</p>
+  <p class="note">To upload multiple images, select all images that you want to upload by holding Command (Mac) or <span id="paren">Control(PC)</span>.</p>
   <%= file_field_tag "photos[]", type: :file, multiple: true %>
 </div>
 
 <div class="field">
   <%= f.label :species %><br>
-  <%= f.select :species,[['Dog', 'dog'], ['Cat', 'cat'], ['Other','other']] %>
+  <%= f.select :species,[['Dog', 'dog'], ['Cat', 'cat'], ['Other','other']], :id=>"species" %>
 </div>
   <div class="field">
      <%= f.label :gender %><br>
      <%= f.label :gender, "Male" %>
-     <%= f.radio_button :gender, 'male' %>
+     <%= f.radio_button :gender, 'male', :class=> "button" %>
      <%= f.label :gender, "Female" %>
      <%= f.radio_button :gender, 'female' %>
   </div>
@@ -56,10 +64,11 @@
   <%= f.text_area :description, size: "50x10" %>
 </div>
 
-<p>Note: Images may take a few moments to upload. Please do not click button more than once.</p>
+<p class="note">Note: Images may take a few moments to upload. Please do not click button more than once.</p>
 
 <div class ="actions">
-  <input type ="submit" name="commit" value="Save Pet"/>
+  <input type ="submit" name="commit" value="Save Pet" id="save-btn"/>
 </div>
 
 <% end %>
+</body>
