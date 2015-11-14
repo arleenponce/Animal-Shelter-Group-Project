@@ -2,14 +2,16 @@ Rails.application.routes.draw do
   
   devise_for :admins
 
-  root to: "pets#index"
+  root to: "home#index"
 
-  match('pets/new/add_breed', {:via => :get, :to => "pets#new"})
-  match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#create"})
-  match('pets/new/add_breed', {:via => [:post, :patch], :to => "pets#update"})
   match('pets', {:via => :patch, :to => "pets#create"})
 
-  match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})
+  match('/pets/:id/add_photo', {:via => :post, :to => 'pets#add_photo'})   
+
+  match('pets/:pet_id/remove_breed/:breed_id', {:via => :get, :to => 'pets#remove_breed'})
+
+
+
 
   resources :pet_images
   resources :breeds

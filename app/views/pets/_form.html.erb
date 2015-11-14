@@ -51,12 +51,21 @@
 <div class= "field">
   <label for="breed_name">Breed</label><br>
   <input type="text" name="breed[breed_name]" id="breed_name"/>
-  <input type ="button" name="add_breed" value="Add Breed" onclick="list_breed()"/>
+  <div id= "breed_output"></div>
 </div>
-<div>
-  <ul id= "breed_output">
 
-  </ul>
+<div id= "existing_output">
+  <% if !@pet.breeds.nil? %>
+    <% if !@pet.breeds.empty? %>  
+      
+      <ul><% @pet.breeds.each do |breed| %>
+        <li><%= breed.breed_name %></li>
+        <a data-method="get" href="/pets/<%= @pet.id %>/remove_breed/<%= breed.id %>">Remove this breed from pet</a>
+        </br></br>
+        <% end %>
+      </ul>
+      <% end %>
+    <% end %>
 </div>
 
 <p>Note: Images may take a few moments to upload. Please do not click button more than once.</p>

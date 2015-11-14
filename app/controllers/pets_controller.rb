@@ -70,6 +70,18 @@ class PetsController < ApplicationController
     end
   end
 
+  def remove_breed
+    puts '*********************'
+    p params
+    @pet = Pet.find(params[:pet_id])
+    breed = @pet.breeds.find(params[:breed_id])
+
+    if breed
+      @pet.breeds.delete(breed)
+    end
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pet
@@ -99,7 +111,20 @@ class PetsController < ApplicationController
       @breeds = []
       # Check to see if the breed's name exists yet, and if so, use that breed id
       breed_name_string_from_user = params[:breed][:breed_name]
+      
+      #i=0
+      #x=find_all_tag.count
+      #while i<=x do
+
+       # x--
+      #end
+
       @breed = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
       @breeds << @breed
     end
-end
+
+    def find_all_tag
+      @html_document.find_all(:id => "addtl_breeds")
+    end
+
+  end
