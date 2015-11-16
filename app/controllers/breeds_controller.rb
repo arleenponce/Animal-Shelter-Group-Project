@@ -61,6 +61,15 @@ class BreedsController < ApplicationController
     end
   end
 
+  def remove_breed
+    # @pet = Pet.find(params[:pet][:id])
+    breed = @pet.breeds.find(params[:breed][:id])
+
+    if breed
+      pet.breeds.delete(breed)
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_breed
@@ -71,4 +80,5 @@ class BreedsController < ApplicationController
     def breed_params
       params.require(:breed).permit(:breed_name)
     end
+
 end

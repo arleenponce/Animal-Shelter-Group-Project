@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <head>
@@ -6,6 +7,10 @@
 
 
 <body class="test">
+=======
+<%= javascript_include_tag('printbreed.js') %>
+
+>>>>>>> printBreeds
 <%= form_for @pet, html: { multipart: true } do |f| %>
   <% if @pet.errors.any? %>
     <div id="error_explanation">
@@ -57,6 +62,21 @@
 <div class= "field">
   <label for="breed_name">Breed</label><br>
   <input type="text" name="breed[breed_name]" id="breed_name"/>
+  <div id= "breed_output"></div>
+</div>
+
+<div id= "existing_output">
+  <% if !@pet.breeds.nil? %>
+    <% if !@pet.breeds.empty? %>  
+      
+      <ul><% @pet.breeds.each do |breed| %>
+        <li><%= breed.breed_name %></li>
+        <a data-method="get" href="/pets/<%= @pet.id %>/remove_breed/<%= breed.id %>">Remove this breed from pet</a>
+        </br></br>
+        <% end %>
+      </ul>
+      <% end %>
+    <% end %>
 </div>
 
 <div class="field">
