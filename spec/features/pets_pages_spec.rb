@@ -7,8 +7,8 @@ describe "the process to add an animal" do
      fill_in('Password', with: '12345678')
      fill_in('Password confirmation', with: '12345678')
      click_button 'Sign up'
-<<<<<<< HEAD
 
+ before(:each) do
      visit '/pets/new'
      fill_in "Name", :with => 'Fido'
      select('Dog', :from => "Species")
@@ -19,9 +19,6 @@ describe "the process to add an animal" do
      fill_in "Description", :with => "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
      click_button "Save Pet"
    end
-=======
-  end
->>>>>>> printBreeds
 
   it "saves information input into name field" do
     expect(page).to have_content "Fido"
