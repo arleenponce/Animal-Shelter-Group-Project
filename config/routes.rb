@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
+  # root to: "home#index"
+
   devise_for :admins
 
-  root to: "home#index"
+ root to: 'pets#index' 
 
   match('pets', {:via => :patch, :to => "pets#create"})
 
