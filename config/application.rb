@@ -2,6 +2,11 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+
+if File.exists?(File.expand_path('../application.yml', __FILE__))
+  ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+end
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
