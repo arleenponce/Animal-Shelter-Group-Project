@@ -1,7 +1,7 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy, :pet_image]
 
-  before_filter :authenticate_admin!, except: [:index, :show, :search_pets]
+  before_filter :authenticate_admin!, except: [:index, :show, :search_pets, :all]
 
   # GET /pets
   # GET /pets.json
@@ -162,7 +162,7 @@ class PetsController < ApplicationController
       @breeds = []
       # Check to see if the breed's name exists yet, and if so, use that breed id
       breed_name_string_from_user = params[:breed][:breed_name]
-      
+
       #i=0
       #x=find_all_tag.count
       #while i<=x do

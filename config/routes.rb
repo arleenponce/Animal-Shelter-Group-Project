@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root :to => 'home#index'
 
   match('/admin', {:via => :get, :to => 'home#admin'})
+  match('/auth/facebook/callback', {:via => :get, :to => "sessions#create"})
+  get('/signout' => "sessions#destroy", :as => :signout)
 
   devise_for :admins
 
