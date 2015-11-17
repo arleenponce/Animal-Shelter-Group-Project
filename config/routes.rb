@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root :to => 'home#index'
 
+  match('/admin', {:via => :get, :to => 'home#admin'})
+
   devise_for :admins
 
   match('pets/all', {:via => :get, :to => "pets#all"})
