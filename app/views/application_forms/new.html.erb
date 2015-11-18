@@ -10,11 +10,11 @@
         <%= link_to "Sign Out", signout_path %>
         <%= render 'current_user_form' %>
       <% else %>
-        <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+      You can <%= link_to "Sign in with Facebook", "/auth/facebook" %> or just continue to fill out the form.
         <%= render 'form' %>
       <% end %>
     </div>
 
-    <%= link_to 'Back', application_forms_path %>
+    <%= link_to 'Back to Main Page', root_path %>
 
   </div>

@@ -22,7 +22,7 @@
     </div>
     <div class="field">
       <%= f.label :email %><br>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, :value => current_user.email %>
     </div>
     <div class="field">
       <%= f.label :street_address %><br>
