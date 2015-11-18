@@ -1,7 +1,7 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy, :pet_image]
 
-  before_filter :authenticate_admin!, except: [:index, :show, :search_pets]
+  before_filter :authenticate_admin!, except: [:index, :show, :search_pets, :all]
 
   # GET /pets
   # GET /pets.json

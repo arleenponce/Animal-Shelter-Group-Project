@@ -42,7 +42,7 @@ describe ApplicationForm do
   it "is invalid with an empty email field" do
     newApplication = ApplicationForm.new
     newApplication.valid?
-    expect(newApplication.errors[:email]).to include("can't be blank")
+    expect(newApplication.errors[:email]).to include("is invalid")
   end
 
   it "should have a email address" do

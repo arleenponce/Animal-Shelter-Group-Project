@@ -2,6 +2,7 @@ class ApplicationFormsController < ApplicationController
   before_action :set_application_form, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_admin!, except: [:create, :show, :new, :edit]
 
+
   # GET /application_forms
   # GET /application_forms.json
   def index
@@ -12,6 +13,7 @@ class ApplicationFormsController < ApplicationController
   # GET /application_forms/1.json
   def show
   end
+
 
   # GET /application_forms/new
   def new
