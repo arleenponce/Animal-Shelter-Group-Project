@@ -299,10 +299,10 @@ td.petName a:hover{
 
 @font-face {
     font-family: code-light;
-    src: url(CODE Light);
+    src: url("public/code/CODE Light.otf");
 }
 
 @font-face {
     font-family: code-bold;
-    src: url(CODE Bold);
+    src: url("public/code/CODE Bold.otf");
 }
