@@ -1,6 +1,8 @@
 <head>
 <%= stylesheet_link_tag 'form' %>
 <%= javascript_include_tag('printbreed.js') %>
+<%= javascript_include_tag('suggested_search.js') %>
+<%= javascript_include_tag('typeahead.jquery.js') %>
 </head>
 
 
@@ -54,11 +56,11 @@
   <%= f.label :weight %><br>
   <%= f.number_field :weight %>
 </div>
-<div class= "field">
+<div class= "field the-basics">
   <label for="breed_name">Breed</label><br>
-  <input type="text" name="breed_0" id="breed_name"/>
+  <input type="text" name="breed_0" id="breed_name" class="typeahead"/>
   <input type="button" onclick="list_breed()" value="Add Another Breed">
-  <div id= "breed_output">
+  <div class="the-basics" id= "breed_output">
   </div>
 </div>
 

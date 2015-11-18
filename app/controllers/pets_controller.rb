@@ -84,11 +84,11 @@ class PetsController < ApplicationController
       all_pets = []
 
       pet_search_string = params[:pet_search_string].strip
-      found_pets = Pet.search(pet_search_string)
+      found_pets = Pet.fuzzy_search(pet_search_string)
       all_pets << found_pets
 
       breed_search_string = params[:breed_search_string].strip
-      breed_found = Breed.search(breed_search_string)
+      breed_found = Breed.fuzzy_search(breed_search_string)
       pet_collection = []
       breed_found.each { |b| pet_collection << b.pets.to_a }
       flat_breed_pets = pet_collection.flatten
@@ -97,10 +97,10 @@ class PetsController < ApplicationController
 
     elsif !params[:pet_search_string].nil? && !params[:pet_search_string].empty?
       pet_search_string = params[:pet_search_string].strip
-      @searched_pet = Pet.search(pet_search_string)
+      @searched_pet = Pet.fuzzy_search(pet_search_string)
     elsif !params[:breed_search_string].nil? && !params[:breed_search_string].empty?
       breed_search_string = params[:breed_search_string].strip
-      breed_found = Breed.search(breed_search_string)
+      breed_found = Breed.fuzzy_search(breed_search_string)
       pet_collection = []
       breed_found.each { |b| pet_collection << b.pets.to_a }
       @searched_pet = pet_collection.flatten
