@@ -161,21 +161,15 @@ class PetsController < ApplicationController
     def add_breed
       @breeds = []
       # Check to see if the breed's name exists yet, and if so, use that breed id
-      breed_name_string_from_user = params[:breed][:breed_name]
-      
-      #i=0
-      #x=find_all_tag.count
-      #while i<=x do
-
-       # x--
-      #end
-
-      @breed = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
-      @breeds << @breed
-    end
-
-    def find_all_tag
-      @html_document.find_all(:id => "addtl_breeds")
+      counter = 0
+      while counter < 4 do
+        if params[:"breed_#{counter}"] !="" && !params[:"breed_#{counter}"].nil?
+          breed_name_string_from_user = params[:"breed_#{counter}"]
+          breed_added = Breed.find_or_create_by(breed_name: breed_name_string_from_user)
+          @breeds << breed_added
+         end
+          counter += 1
+      end
     end
 
   end

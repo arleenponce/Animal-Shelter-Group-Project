@@ -1,11 +1,10 @@
 <head>
-<link rel="stylesheet" type="text/css" href="../../assets/stylesheets/form.css">
+<%= stylesheet_link_tag 'form' %>
+<%= javascript_include_tag('printbreed.js') %>
 </head>
 
 
 <body class="test">
-
-<%= javascript_include_tag('printbreed.js') %>
 
 <%= form_for @pet, html: { multipart: true } do |f| %>
   <% if @pet.errors.any? %>
@@ -57,8 +56,10 @@
 </div>
 <div class= "field">
   <label for="breed_name">Breed</label><br>
-  <input type="text" name="breed[breed_name]" id="breed_name"/>
-  <div id= "breed_output"></div>
+  <input type="text" name="breed_0" id="breed_name"/>
+  <input type="button" onclick="list_breed()" value="Add Another Breed">
+  <div id= "breed_output">
+  </div>
 </div>
 
 <div id= "existing_output">
