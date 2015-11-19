@@ -8,7 +8,7 @@ describe "the process to add an animal" do
      fill_in('Password confirmation', with: '12345678')
      click_button 'Sign up'
    end
-   
+
  before(:each) do
      visit '/pets/new'
      fill_in "Name", :with => 'Fido'
@@ -62,14 +62,6 @@ describe "the process to add an animal" do
   end
 
   it "can remove the association between a breed and a pet" do
-    # visit '/pets/new'
-    # fill_in "Name", :with => 'Fido'
-    # select('Dog', :from => "Species")
-    # choose('pet_gender_male')
-    # fill_in "Age", :with => '2'
-    # fill_in "Weight", :with => "20"
-    # fill_in "Breed", :with => "Golden Retriever"
-    # click_button "Save Pet"
     visit '/pets'
     expect(page).to have_content "Golden Retriever"
     click_link 'Edit'
@@ -89,16 +81,13 @@ describe "the process to add an animal" do
     fill_in "Weight", :with => "20"
     fill_in "Breed", :with => "Golden Retriever"
     click_button "Add Another Breed"
-    # find_field 'breed_1'
-    # fill_in 'breed_1', :with => "Dalmatian"
     click_button "Save Pet"
     expect(page).to have_content "Golden Retriever"
-    # expect(page).to have_content "Dalmatian"
     visit "/breeds"
     expect(page).to have_content "Golden Retriever"
-    # expect(page).to have_content "Dalmatian"
     # Capybara wont work with JS out of the box so we can't test dynamically generated input fields.
   end
+
 
 
 end
