@@ -104,4 +104,11 @@ describe "Search pets" do
     expect(page).to have_content 'Teddy'
   end
 
+it "should return all animals that match at least 30% of the search term" do
+    visit '/pets/search_pets'
+      fill_in("Search by breed", :with => "Box")
+      click_button 'Search'
+      expect(page).to have_content 'Malcolm'
+      # expect(page).to have_content 'Teddy'
+  end
 end

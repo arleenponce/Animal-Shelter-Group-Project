@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   match('pets', {:via => :patch, :to => "pets#create"})
 
+  get 'breeds/typeahead/:query' => 'breeds#typeahead'
+
   match('pets/:pet_id/remove_breed/:breed_id', {:via => :get, :to => 'pets#remove_breed'})
 
   resources :application_forms

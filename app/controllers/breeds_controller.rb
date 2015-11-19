@@ -70,6 +70,10 @@ class BreedsController < ApplicationController
     end
   end
 
+  def breed_suggestions
+    @suggestions  = Breed.fuzzy_search(name: params[:q])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_breed
@@ -79,6 +83,10 @@ class BreedsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def breed_params
       params.require(:breed).permit(:breed_name)
+    end
+
+    def search_params
+      params[:breed_search] || {}
     end
 
 end
