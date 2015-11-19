@@ -14,7 +14,7 @@
  *= require_self
 */
 body {
-  padding-top: 13%;
+  padding-top: 10%;
   padding-left: 10px;
 }
 .test {
@@ -25,12 +25,12 @@ background-color: black;
 
 div {
   color:white;
-  font-family: code-light;
+  font-family: Poiret+One;
 }
 
 
 input[type="text"], textarea {
-  background-color:#72BDA3;
+  background-color:white;
   border: 1px solid black;
   border-radius: 3px;
 }
@@ -55,7 +55,7 @@ td{
  td.petName a{
   color: #72bda3;
   text-decoration: none;
-  font-family: code-light;
+  font-family: Poiret+One;
 
 }
 
@@ -85,19 +85,12 @@ p, .petsMain{
 }
 
 #user_nav{
-  color:red;
+  color:black;
 }
 
 #noticeBar{
   margin-bottom: 5px;
 }
-
-/*.tableHead{
-  font-family: code-light;
-  font-size: 2em;
-  padding-right: 10px;
-  /*text-shadow: 1px 1px 1px #72BDA3;*/
-
 
 /*makes the s in parentheses stand out a bit*/
 .sParen{
@@ -107,7 +100,7 @@ p, .petsMain{
 /*main heading "meetour furry friends"*/
 #petlist{
   color: #72BDA3;
-  font-family: code-bold;
+  font-family: Poiret+one;
   text-shadow: .75px .75px .75px #222;
   text-indent: 10%;
   font-size: 4em;
@@ -122,7 +115,7 @@ p, .petsMain{
 
 #adminEdit{
   color:#72BDA3;
-  font-family: code-light;
+  font-family: Poiret+One;
 }
 
 #cancel{
@@ -131,12 +124,12 @@ p, .petsMain{
 
 #unhappy{
   color: #72BDA3;
-  font-family: code-light;
+  font-family: Poiret+One;
   font-size: 2em;
 }
 
 #newP{
-  font-family: code-bold;
+  font-family: Poiret+one;
   color: #72BDA3;
   text-shadow: 1px 1px 1px black;
 }
@@ -144,7 +137,7 @@ p, .petsMain{
 /*main style for pets profile*/
 
 .profile{
-  font-family: code-light;
+  font-family: Poiret+One;
   color:#72BDA3;
 }
 
@@ -183,22 +176,30 @@ p, .petsMain{
 
 
 #save-btn{
-  background-color: #72BDA3;
+  background-color: transparent;
+  color:#632a7b;
   height:5em;
   width: 10em;
-  font-family: code-bold;
+  font-family: Poiret+one;
   border-radius: 3px;
-  border: 3px solid black;
+  border: 3px solid #632a7b;
+}
+
+#save-btn:hover{
+  background-color: #632a7b;
+  color:#72bda3;
+  border: #72bda3;
 }
 
 .note{
   color: black;
-  font-family: code-bold;
+  font-family: Poiret+one;
+  font-weight: bold;
 }
 
 .log{
   color:#72BDA3;
-  font-family: code-light;
+  font-family: Poiret+One;
 
 }
 
@@ -211,7 +212,6 @@ p, .petsMain{
   margin-top:10em;
   padding-bottom: 5em;
   padding-top: 5em;
-  /*border: 5px solid white;*/
   border-radius: 15px;
   margin-left: 25%;
 }
@@ -221,18 +221,14 @@ p, .petsMain{
 .navbar-default {
     border-color: black;
     background-color: #222;
-}
+    height:80px;
+  }
 
 .navbar-default .navbar-brand {
-    font-family: "code-bold","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: Poiret+one,Helvetica Neue,Helvetica,Arial,cursive;
     color: white;
     background-color: transparent;
 }
-
-#friends{
-  font-family: code-light;
-}
-
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
@@ -246,7 +242,7 @@ p, .petsMain{
 
 .navbar-default .navbar-collapse {
     border-color: rgba(255,255,255,.02);
-}
+  }
 
 .navbar-default .navbar-toggle {
     border-color: #72bda3;
@@ -264,7 +260,7 @@ p, .petsMain{
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Poiret+one,Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: white;
@@ -330,30 +326,17 @@ p, .petsMain{
 }
 
 
-
-@font-face {
-    font-family: code-light;
-    src: url(CODE Light);
-}
-
-@font-face {
-    font-family: code-bold;
-    src: url(CODE Bold);
-}
-
 .petsMain {
   color: #72bda3;
   text-align: center;
-  /*border: 2px solid red;*/
   vertical-align: middle;
 }
 .petsMain, p {
-  font-family: code-light;
+  font-family: Poiret+one;
   color: #632a7b;
 
 }
 .petPrintout{
-  /*border: 1px solid black;*/
   vertical-align: middle;
   height: 325px;
   width: 350px;
@@ -365,6 +348,6 @@ p, .petsMain{
   border: 5px solid #222;
 }
 
-.outer {
+/*.outer {*/
   /*border: 4px solid blue;*/
-}
+/*}*/

@@ -26,7 +26,7 @@ describe "the admin control panel" do
 
   it "should be able to go to the pets listing page" do
     click_link "Pets Listing"
-    expect(page).to have_content "Listing Pets"
+    expect(page).to have_content "Meet our furry friends!"
   end
 
   it "should be able to go to the list of submitted applications" do

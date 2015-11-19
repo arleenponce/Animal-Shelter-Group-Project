@@ -2,14 +2,14 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Poiret+one,verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 /* line 9, /Users/learn01/Desktop/Animal-Shelter-Group-Project/app/assets/stylesheets/scaffolds.scss */
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Poiret+one,verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
