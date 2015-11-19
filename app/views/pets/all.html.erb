@@ -12,7 +12,7 @@
           <% if pet.pet_images.first.nil? %>
             <p>No Image uploaded</p>
             <% else %>
-              <%= image_tag(pet.pet_images.first.photo.url(:thumb)) %>
+              <%= link_to image_tag(pet.pet_images.first.photo.url(:medium)), pet %>
           <% end %>
           <p><br><%= pet.species %>,
           <%= pet.gender %>,

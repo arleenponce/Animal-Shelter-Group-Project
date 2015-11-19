@@ -113,9 +113,6 @@ p, .petsMain{
   font-size: 4em;
   text-align: center;
 }
-
-.petName{}
-
 /*end main pet listing*/
 
 /*begin admin edit*/
@@ -355,7 +352,7 @@ p, .petsMain{
 .petPrintout{
   /*border: 1px solid black;*/
   vertical-align: middle;
-  height: 325px;
+  height: 400px;
   width: 350px;
   display: inline-block;
   position: relative;
