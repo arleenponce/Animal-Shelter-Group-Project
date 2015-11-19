@@ -4,12 +4,12 @@ RSpec.describe "application_forms/edit", type: :view do
   before(:each) do
     @application_form = assign(:application_form, ApplicationForm.create!(
       :name => "MyString",
-      :phone => "MyString",
-      :email => "MyString",
+      :phone => "223456789",
+      :email => "MyString@email.com",
       :street_address => "MyString",
       :city => "MyString",
       :state => "MyString",
-      :zip => 1,
+      :zip => 12345,
       :information => "MyText"
     ))
   end
