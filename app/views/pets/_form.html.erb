@@ -1,10 +1,5 @@
-<head>
-<%= stylesheet_link_tag 'form' %>
-<%= javascript_include_tag('printbreed.js') %>
-</head>
-
-
-<body class="test">
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<div class="listApps">
 
 <%= form_for @pet, html: { multipart: true } do |f| %>
   <% if @pet.errors.any? %>
@@ -67,8 +62,8 @@
     <% if !@pet.breeds.empty? %>
 
       <ul><% @pet.breeds.each do |breed| %>
-        <li><%= breed.breed_name %></li>
-        <a data-method="get" href="/pets/<%= @pet.id %>/remove_breed/<%= breed.id %>">Remove this breed from pet</a>
+        <li class="listApps"><%= breed.breed_name %></li>
+        <a data-method="get" class="listApps" href="/pets/<%= @pet.id %>/remove_breed/<%= breed.id %>">Remove this breed from pet</a>
         </br></br>
         <% end %>
       </ul>
@@ -88,4 +83,4 @@
 </div>
 
 <% end %>
-</body>
+</div>

@@ -11,9 +11,12 @@
       <div class="img_container">
         <% if @pet.pet_images.first.nil? %>
           <%= image_tag "comingsoon.jpg" %>
-        <% end %>
+
+        <% else %>
 
         <%= image_tag(@pet.pet_images.first.photo.url(:large), id: "main_img") %>
+
+        <% end %>
 
         </br>
 
