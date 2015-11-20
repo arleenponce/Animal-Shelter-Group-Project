@@ -53,23 +53,7 @@ td{
   font-weight:bold;
 }
 
- td.petName a{
-  color: #72bda3;
-  text-decoration: none;
-  font-family: code-light;
-
-}
-
-td.petName a:hover{
-  color: white;
-}
-
 /*begin main pet listing*/
-/*main table information on pets*/
-.petsMain {
-  color: #72bda3;
-
-}
 /*main background color for body*/
 .petMainBody{
   background-color: #d8cfaf;
