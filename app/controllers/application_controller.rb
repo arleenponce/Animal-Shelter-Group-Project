@@ -7,11 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
 
-  def authenticate
-    authenticate_or_request_with_http_basic('Administration') do |username, password|
-      username == 'admin' && password == 'password'
-    end
-  end
+  
 
 private
 

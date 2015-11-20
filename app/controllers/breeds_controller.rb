@@ -30,9 +30,9 @@ class BreedsController < ApplicationController
       if @breed.save
         format.html { redirect_to @breed, notice: 'Breed was successfully created.' }
         format.json { render :show, status: :created, location: @breed }
-      else
-        format.html { render :new }
-        format.json { render json: @breed.errors, status: :unprocessable_entity }
+      # else
+      #   format.html { render :new }
+      #   format.json { render json: @breed.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,9 +44,9 @@ class BreedsController < ApplicationController
       if @breed.update(breed_params)
         format.html { redirect_to @breed, notice: 'Breed was successfully updated.' }
         format.json { render :show, status: :ok, location: @breed }
-      else
-        format.html { render :edit }
-        format.json { render json: @breed.errors, status: :unprocessable_entity }
+      # else
+      #   format.html { render :edit }
+      #   format.json { render json: @breed.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -61,18 +61,18 @@ class BreedsController < ApplicationController
     end
   end
 
-  def remove_breed
-    # @pet = Pet.find(params[:pet][:id])
-    breed = @pet.breeds.find(params[:breed][:id])
+  # def remove_breed
+  #   # @pet = Pet.find(params[:pet][:id])
+  #   breed = @pet.breeds.find(params[:breed][:id])
 
-    if breed
-      pet.breeds.delete(breed)
-    end
-  end
+  #   if breed
+  #     pet.breeds.delete(breed)
+  #   end
+  # end
 
-  def breed_suggestions
-    @suggestions  = Breed.fuzzy_search(name: params[:q])
-  end
+  # def breed_suggestions
+  #   @suggestions  = Breed.fuzzy_search(name: params[:q])
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -85,8 +85,8 @@ class BreedsController < ApplicationController
       params.require(:breed).permit(:breed_name)
     end
 
-    def search_params
-      params[:breed_search] || {}
-    end
+    # def search_params
+    #   params[:breed_search] || {}
+    # end
 
 end

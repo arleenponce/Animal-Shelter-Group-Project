@@ -12,4 +12,15 @@ describe "access application form" do
     expect(page).to have_content("testuser")
     expect(page).to have_content("Sign Out")
   end
+
+  it "can sign you out of Facebook" do
+    visit '/application_forms/new'
+    expect(page).to have_content("Sign in with Facebook")
+    click_link "Sign in with Facebook"
+    expect(page).to have_content("testuser")
+    expect(page).to have_content("Sign Out")
+    click_link "Sign Out"
+    expect(page).to have_content("Sign in with Facebook")
+  end
 end
+
