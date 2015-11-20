@@ -9,6 +9,12 @@ describe "the process to add an animal" do
      click_button 'Sign up'
    end
 
+   it "displays an error message if pet isn't saved" do
+    visit '/pets/new'
+    click_button "Save Pet"
+    expect(page).to have_content "prohibited this"
+   end
+   
  before(:each) do
      visit '/pets/new'
      fill_in "Name", :with => 'Fido'
@@ -45,12 +51,30 @@ describe "the process to add an animal" do
     expect(page).to have_content "Golden Retriever"
   end
 
+  it "updates pet information" do 
+    visit '/admin'
+    click_link 'Pets Listing'
+    click_link 'Edit'
+    fill_in "Name", :with => ''
+    click_button "Save Pet"
+    expect(page).to have_content "error"
+  end
+
+  it "updates pet information" do 
+    visit '/admin'
+    click_link 'Pets Listing'
+    click_link 'Edit'
+    click_link 'Destroy'
+    expect(page).to have_content "successfully destroyed"
+  end
+
   it "gives an error message if the user forgets to input a name" do
     visit '/pets/new'
     fill_in "Name", :with => ''
     click_button "Save Pet"
     expect(page).to have_content "error"
   end
+
 
   it "saves a new instance of breed to the breed index" do
     visit "/breeds"
@@ -60,6 +84,8 @@ describe "the process to add an animal" do
   it "saves a description for a pet" do
     expect(page).to have_content "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   end
+
+
 
   it "can remove the association between a breed and a pet" do
     visit '/pets'
@@ -87,6 +113,9 @@ describe "the process to add an animal" do
     expect(page).to have_content "Golden Retriever"
     # Capybara wont work with JS out of the box so we can't test dynamically generated input fields.
   end
+
+  
+
 
 
 

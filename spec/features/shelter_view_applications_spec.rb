@@ -58,4 +58,10 @@ describe "the shelter can view application forms from potential adopters" do
      expect(page).to have_content "short message"
    end
 
+   it "should successfully destroy a saved record" do
+    click_link "Destroy"
+    expect(page).to have_content "Application form was successfully destroyed"
+   end
+
+
  end

@@ -3,6 +3,9 @@ require 'rails_helper'
 
 
 describe ApplicationForm do
+
+
+
   before(:each) do
     @newApplication = ApplicationForm.new
     @newApplication.name = "John Doe"
@@ -92,6 +95,12 @@ describe ApplicationForm do
 
   it "should have information" do
     expect(@newApplication.information).to eq "Enter some information here."
+  end
+
+  it "throws an error if application does not save" do
+    newApplication = ApplicationForm.new
+    newApplication.valid?
+    expect(newApplication.errors[:name]).to include("can't be blank")
   end
 
 end

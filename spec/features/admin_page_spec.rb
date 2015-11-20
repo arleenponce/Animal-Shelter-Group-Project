@@ -12,6 +12,7 @@ describe "the admin control panel" do
 
   end
 
+
   it "should have links to other pages" do
     expect(page).to have_content "Add a Pet"
     expect(page).to have_content "Pets Listing"
@@ -26,7 +27,7 @@ describe "the admin control panel" do
 
   it "should be able to go to the pets listing page" do
     click_link "Pets Listing"
-    expect(page).to have_content "Meet our furry friends!"
+    expect(page).to have_content "Meet our furry friends"
   end
 
   it "should be able to go to the list of submitted applications" do

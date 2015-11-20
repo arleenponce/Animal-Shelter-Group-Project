@@ -42,17 +42,17 @@ class ApplicationFormsController < ApplicationController
 
   # PATCH/PUT /application_forms/1
   # PATCH/PUT /application_forms/1.json
-  def update
-    respond_to do |format|
-      if @application_form.update(application_form_params)
-        format.html { redirect_to @application_form, notice: 'Application form was successfully updated.' }
-        format.json { render :show, status: :ok, location: @application_form }
-      else
-        format.html { render :edit }
-        format.json { render json: @application_form.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @application_form.update(application_form_params)
+  #       format.html { redirect_to @application_form, notice: 'Application form was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @application_form }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @application_form.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /application_forms/1
   # DELETE /application_forms/1.json
