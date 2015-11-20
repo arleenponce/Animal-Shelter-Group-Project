@@ -1,56 +1,117 @@
-<link rel="stylesheet" type="text/css" href="form.css">
+<style>
+.petProfile{
+  /*text-align: center;*/
+}
+.profile {
+  color: #632a7b;
+}
+h1.profile {
+  color: #72bda3;
+  text-align: center;
+  text-shadow: .75px .75px .75px #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.imgthumbs {
+  /*width: 400px;*/
+  text-align: justify-all;
+  padding-top: 5px;
 
-<body class="profileBG">
+}
+.imgthumbs img{
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+  display: inline-block;
+}
+.img_container {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+}
+.pic_container{
+  text-align: center;
+  width: auto;
+}
+.text_container {
+  text-align: left;
+}
+</style>
 
 <p id="notice"><%= notice %></p>
+<div class="container col-md-12">
+<h1 class="profile"><%= @pet.name %></h1>
+</div>
 
-<p class="profile">
-  <strong>Name:</strong>
-  <%= @pet.name %>
-</p>
+<div class="container col-md-12">
+  <div class="container col-md-6">
+    <div class="pic_container">
+      <div class="img_container">
+        <% if @pet.pet_images.first.nil? %>
+          <%= image_tag "comingsoon.jpg" %>
+        <% end %>
 
-<% if @pet.pet_images.first.nil? %>
-  <%= image_tag "comingsoon.jpg" %>
-<% end %>
+        <%= image_tag(@pet.pet_images.first.photo.url(:large), id: "main_img") %>
 
-<% @pet.pet_images.each do |pet_image| %>
-  <%= image_tag(pet_image.photo.url(:medium)) %>
-<% end %>
+        </br>
 
+        <div class="imgthumbs">
+          <% @pet.pet_images.each do |pet_image| %>
+            <%= link_to image_tag(pet_image.photo.url(:thumb)), "#{pet_image.photo.url(:large)}", onClick: onclick="swap(this); return false;" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p class="profile">
-  <strong>Species:</strong>
-  <%= @pet.species %>
-</p>
+  </br>
 
-<p class="profile">
-  <strong>Gender:</strong>
-  <%= @pet.gender %>
-</p>
+  <div class="container col-md-6">
+    <div class="text_container">
+        <p class="profile">
+          <strong>Animal Type:</strong>
+          <%= @pet.species %>
+        </p>
 
-<p class="profile">
-  <strong>Age:</strong>
-  <%= @pet.age %>
-</p>
+        <p class="profile">
+          <strong>Gender:</strong>
+          <%= @pet.gender %>
+        </p>
 
-<p class="profile">
-  <strong>Weight:</strong>
-  <%= @pet.weight %>
-</p>
-<p><strong>Breed:</strong>
-  <% if !@pet.breeds.empty? %>
-      <% @pet.breeds.each do |b| %>
-        <%= b.breed_name %>
-      <% end %>
-      <% else %>
-      <%= "No breed known" %>
-    <% end %></p>
+        <p class="profile">
+          <strong>Age:</strong>
+          <%= @pet.age %>
+        </p>
 
-<p class="profile">
-  <strong>Description:</strong>
-  <%= @pet.description %>
-</p>
+        <p class="profile">
+          <strong>Weight:</strong>
+          <%= @pet.weight %> lbs
+        </p>
+
+        <p class="profile"><strong>Breed(s):</strong>
+          <% if !@pet.breeds.empty? %>
+              <% @pet.breeds.each do |b| %>
+                <%= b.breed_name %>
+              <% end %>
+            <% else %>
+              <%= "No breed known" %>
+            <% end %></p>
+
+        <p class="profile">
+          <strong>Description:</strong>
+          <%= @pet.description %>
+        </p>
+    </div>
+  </div>
+</div>
+
 
 <a href="/pets/all">Back</a>
 
-</body>
+<script type="text/javascript">
+  function swap(image) {
+    document.getElementById("main_img").src = image.href
+  }
+</script>
