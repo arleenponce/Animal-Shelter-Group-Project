@@ -14,7 +14,7 @@ describe "the process to add an animal" do
     click_button "Save Pet"
     expect(page).to have_content "prohibited this"
    end
-   
+
  before(:each) do
      visit '/pets/new'
      fill_in "Name", :with => 'Fido'
@@ -51,18 +51,18 @@ describe "the process to add an animal" do
     expect(page).to have_content "Golden Retriever"
   end
 
-  it "updates pet information" do 
+  it "updates pet information" do
     visit '/admin'
-    click_link 'Pets Listing'
+    click_link 'Pet Listing'
     click_link 'Edit'
     fill_in "Name", :with => ''
     click_button "Save Pet"
     expect(page).to have_content "error"
   end
 
-  it "updates pet information" do 
+  it "updates pet information" do
     visit '/admin'
-    click_link 'Pets Listing'
+    click_link 'Pet Listing'
     click_link 'Edit'
     click_link 'Destroy'
     expect(page).to have_content "successfully destroyed"
@@ -114,7 +114,7 @@ describe "the process to add an animal" do
     # Capybara wont work with JS out of the box so we can't test dynamically generated input fields.
   end
 
-  
+
 
 
 
