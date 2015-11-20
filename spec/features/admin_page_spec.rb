@@ -15,8 +15,8 @@ describe "the admin control panel" do
 
   it "should have links to other pages" do
     expect(page).to have_content "Add a Pet"
-    expect(page).to have_content "Pets Listing"
-    expect(page).to have_content "Application Listings"
+    expect(page).to have_content "Pet Listing"
+    expect(page).to have_content "Applications"
     expect(page).to have_content "Main Page"
   end
 
@@ -26,12 +26,17 @@ describe "the admin control panel" do
   end
 
   it "should be able to go to the pets listing page" do
+<<<<<<< HEAD
     click_link "Pets Listing"
     expect(page).to have_content "Meet our furry friends"
+=======
+    click_link "Pet Listing"
+    expect(page).to have_content "Meet our furry friends!"
+>>>>>>> fontChanges
   end
 
   it "should be able to go to the list of submitted applications" do
-    click_link "Application Listings"
+    click_link "Applications"
     expect(page).to have_content "Listing Application Forms"
   end
 

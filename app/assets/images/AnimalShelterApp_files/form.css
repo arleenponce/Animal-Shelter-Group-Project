@@ -206,13 +206,13 @@
 <div id="container">
   <h2>No route matches [GET] &quot;/assets/stylesheets/form.css&quot;</h2>
 
-  
+
 <p><code>Rails.root: /Users/learn01/Desktop/Animal-Shelter-Group-Project</code></p>
 
 <div id="traces">
     <a href="#" onclick="hide(&#39;Framework-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Application-Trace&#39;);; return false;">Application Trace</a> |
     <a href="#" onclick="hide(&#39;Application-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Framework-Trace&#39;);; return false;">Framework Trace</a> |
-    <a href="#" onclick="hide(&#39;Application-Trace&#39;);hide(&#39;Framework-Trace&#39;);show(&#39;Full-Trace&#39;);; return false;">Full Trace</a> 
+    <a href="#" onclick="hide(&#39;Application-Trace&#39;);hide(&#39;Framework-Trace&#39;);show(&#39;Full-Trace&#39;);; return false;">Full Trace</a>
 
     <div id="Application-Trace" style="display: block;">
       <pre><code></code></pre>
@@ -267,7 +267,7 @@
       Routes match in priority from top to bottom
     </p>
 
-    
+
 <table id='route_table' class='route_table'>
   <thead>
     <tr>
@@ -296,12 +296,12 @@
   </tbody>
   <tbody>
     <tr class='route_row' data-helper='path'>
-  <td data-route-name='new_admin_session'>
+  <!-- <td data-route-name='new_admin_session'>
       new_admin_session<span class='helper'>_path</span>
   </td>
   <td data-route-verb='GET'>
     GET
-  </td>
+  </td> -->
   <td data-route-path='/admins/sign_in(.:format)' data-regexp='^\/admins\/sign_in(?:\.([^\/.?]+))?$'>
     /admins/sign_in(.:format)
   </td>
@@ -1028,7 +1028,7 @@
 </script>
 
 
-  
+
 
 <h2 style="margin-top: 30px">Request</h2>
 <p><b>Parameters</b>:</p> <pre>None</pre>
@@ -1654,4 +1654,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }).call(this);
 </script>
-

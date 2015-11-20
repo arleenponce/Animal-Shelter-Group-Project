@@ -4,7 +4,7 @@ background-color: black;
 
 div {
   color:white;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
 }
 input[type="text"], textarea{
   background-color:#72BDA3;
@@ -21,20 +21,20 @@ input[type="select"], area{
 
 #eP{
   color:#72BDA3;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
 }
 
 #save-btn{
   background-color: #72BDA3;
   height:5em;
   width: 10em;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   border-radius: 3px;
 }
 
 .note{
   color:white;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
 }
 
 #user_nav:hover{

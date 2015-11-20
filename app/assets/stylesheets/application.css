@@ -26,11 +26,11 @@ background-color: black;
 
 div {
   color:white;
-  font-family: Poiret+One;
+  font-family: "Poiret one";
 }
 
 
-input[type="text"], textarea {
+/*input[type="text"], textarea {
   background-color:white;
   border: 1px solid black;
   border-radius: 3px;
@@ -38,6 +38,18 @@ input[type="text"], textarea {
 
 input[type="select"], area{
   background-color:#72BDA3;
+}
+
+input[type="number"], textarea {
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 3px;
+}*/
+
+#phone {
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 /*table text color for pets list*/
 td{
@@ -53,12 +65,12 @@ td{
   font-weight:bold;
 }
 
- td.petName a{
+ /*td.petName a{
   color: #72bda3;
   text-decoration: none;
-  font-family: Poiret+One;
+  font-family: "Poiret One";
 
-}
+}*/
 
 td.petName a:hover{
   color: white;
@@ -101,7 +113,7 @@ p, .petsMain{
 /*main heading "meetour furry friends"*/
 #petlist{
   color: #72BDA3;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   text-shadow: .75px .75px .75px #222;
   text-indent: 10%;
   font-size: 4em;
@@ -113,7 +125,7 @@ p, .petsMain{
 
 #adminEdit{
   color:#72BDA3;
-  font-family: Poiret+One;
+  font-family: "Poiret One";
 }
 
 #cancel{
@@ -122,12 +134,12 @@ p, .petsMain{
 
 #unhappy{
   color: #72BDA3;
-  font-family: Poiret+One;
+  font-family: "Poiret One";
   font-size: 2em;
 }
 
 #newP{
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   color: #72BDA3;
   text-shadow: 1px 1px 1px black;
 }
@@ -135,7 +147,7 @@ p, .petsMain{
 /*main style for pets profile*/
 
 .profile{
-  font-family: Poiret+One;
+  font-family: "Poiret One";
   color:#72BDA3;
 }
 
@@ -178,7 +190,7 @@ p, .petsMain{
   color:#632a7b;
   height:5em;
   width: 10em;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   border-radius: 3px;
   border: 3px solid #632a7b;
 }
@@ -191,13 +203,13 @@ p, .petsMain{
 
 .note{
   color: black;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   font-weight: bold;
 }
 
 .log{
   color:#72BDA3;
-  font-family: Poiret+One;
+  font-family: "Poiret One";
 
 }
 
@@ -223,7 +235,7 @@ p, .petsMain{
   }
 
 .navbar-default .navbar-brand {
-    font-family: Poiret+one,Helvetica Neue,Helvetica,Arial,cursive;
+    font-family: "Poiret One",Helvetica Neue,Helvetica,Arial,cursive;
     color: white;
     background-color: transparent;
 }
@@ -258,7 +270,7 @@ p, .petsMain{
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: white;
@@ -330,7 +342,7 @@ p, .petsMain{
   vertical-align: middle;
 }
 .petsMain, p {
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   color: #632a7b;
 
 }
@@ -344,6 +356,33 @@ p, .petsMain{
 }
 .petPrintout img  {
   border: 5px solid #222;
+}
+
+/*admin home page*/
+
+.admin-btn{
+  background-color: #72bda3;
+  color: white;
+  height:8em;
+  width: 15em;
+  font-family: ;
+  font-weight: lighter;
+  border-radius: 3px;
+  border: 3px solid #72bda3;
+  margin-bottom: 10px;
+
+}
+
+#newApp{
+  font-family: "Poiret One";
+}
+
+.listApps{
+  font-family: "Poiret One";
+}
+
+.actions{
+  color: black;
 }
 
 /*.outer {*/

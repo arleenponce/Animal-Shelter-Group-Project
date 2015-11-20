@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: Poiret+one,"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One","Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: black;
 }
 
@@ -54,7 +54,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -73,7 +73,7 @@ h6 {
 .btn-primary {
     border-color: #fed136;
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One", Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #fed136;
@@ -124,9 +124,9 @@ fieldset[disabled] .btn-primary.active {
     border: 3px solid white;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Poiret One', Helvetica;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 200;
     color: white;
     background-color: transparent;
 
@@ -174,15 +174,6 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
-/*#bottom-btn{
-  border: 3px solid white;
-  color:white;
-}*/
-
-#bottom-btn:hover{
-  background-color: #632a7b;
-  border: 2px solid #632a7b;
-}
 
 .navbar-default {
     border-color: transparent;
@@ -190,15 +181,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: Poiret+one,"Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Poiret One","Helvetica Neue",Helvetica,Arial,cursive;
     color: white;
 }
-
-/*#friends{
-  font-family: Poiret+One;
-  font-weight:100;
-}*/
-
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
@@ -231,7 +216,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: white;
@@ -308,7 +293,7 @@ header {
 }
 
 #admin{
-  font-family: Poiret+One;
+  font-family: "Poiret One";
   font-size: 15px;
 }
 
@@ -325,7 +310,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family:  Poiret+One,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:  "Poiret One","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: normal;
     line-height: 22px;
@@ -334,7 +319,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Poiret+one,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 4em;
     font-weight: 300;
     line-height: 50px;
@@ -349,7 +334,7 @@ header .intro-text .intro-heading {
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
-        font-family: Poiret+one,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Poiret One","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
         font-style: normal;
         line-height: 40px;
@@ -371,7 +356,7 @@ header .intro-text .intro-heading {
 #furFriends{
   color:#72BDA3;
   text-shadow: 1px 1px 1px white;
-  font-family: Poiret+one;
+  font-family: "Poiret One";
   font-weight: 300;
 }
 
@@ -393,13 +378,13 @@ section h2.section-heading {
     font-size: 40px;
     color: #632a7b;
     text-shadow: 1px 1px 1px white;
-    font-family: Poiret+one;
+    font-family: "Poiret One";
 }
 
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: Poiret+one,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 1.2em;
     font-style: normal;
     font-weight: 100;
@@ -417,7 +402,7 @@ section h3.section-subheading {
     margin: 15px 0;
     text-transform: none;
     color: white;
-    font-family: Poiret+one;
+    font-family: "Poiret One";
 }
 
 #adopt{
@@ -487,7 +472,7 @@ section h3.section-subheading {
 
 #adopt .portfolio-item .portfolio-caption p {
     margin: 0;
-    font-family: Poiret+one,"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One","Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: normal;
 }
@@ -508,7 +493,7 @@ section h3.section-subheading {
     border: 3px solid #632a7b;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #632a7b;
@@ -534,12 +519,12 @@ section h3.section-subheading {
     border: 3px solid #72bda3;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #72bda3;
     background-color: transparent;
-    margin-left: 36%;
+    margin-left: 40%;
     margin-right: auto;
 }
 
@@ -589,28 +574,28 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: Poiret+oneMontserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #72BDA3  ;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family:Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -627,7 +612,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family:Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
     color: #72BDA3;
 }
@@ -636,7 +621,7 @@ footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
     text-transform: none;
-    font-family:Poiret+one,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Poiret One",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 
