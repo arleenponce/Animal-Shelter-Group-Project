@@ -65,6 +65,7 @@ td{
   font-weight:bold;
 }
 
+<<<<<<< HEAD
  /*td.petName a{
   color: #72bda3;
   text-decoration: none;
@@ -76,12 +77,9 @@ td.petName a:hover{
   color: white;
 }
 
+=======
+>>>>>>> stashBranch
 /*begin main pet listing*/
-/*main table information on pets*/
-.petsMain {
-  color: #72bda3;
-
-}
 /*main background color for body*/
 .petMainBody{
   background-color: #d8cfaf;
@@ -144,12 +142,8 @@ p, .petsMain{
   text-shadow: 1px 1px 1px black;
 }
 
-/*main style for pets profile*/
 
-.profile{
-  font-family: "Poiret One";
-  color:#72BDA3;
-}
+
 
 .adminEditMain{
   background-color: black;
@@ -335,12 +329,58 @@ p, .petsMain{
   background-color: black;
 }
 
+/*begin pet profile styling*/
+.petProfile{
+  /*text-align: center;*/
+}
 
-.petsMain {
+.profile{
+  font-family: "Poiret One";
+  color:#72BDA3;
+}
+
+h1.profile {
+  color: #72bda3;
+  text-align: center;
+  text-shadow: .75px .75px .75px #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.imgthumbs {
+  text-align: justify-all;
+  padding-top: 5px;
+}
+
+.imgthumbs img{
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.img_container {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+}
+
+.pic_container{
+  text-align: center;
+  width: auto;
+}
+
+.text_container {
+  text-align: left;
+}
+/*end pet profile styling*/
+
+/*.petsMain {
   color: #72bda3;
   text-align: center;
   vertical-align: middle;
-}
+}*/
 .petsMain, p {
   font-family: "Poiret One";
   color: #632a7b;
@@ -348,7 +388,7 @@ p, .petsMain{
 }
 .petPrintout{
   vertical-align: middle;
-  height: 400px;
+  height: auto;
   width: 350px;
   display: inline-block;
   position: relative;
