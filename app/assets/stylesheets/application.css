@@ -29,6 +29,9 @@ div {
   font-family: "Poiret one";
 }
 
+h1.search{
+  font-family: "Poiret One";
+}
 
 /*input[type="text"], textarea {
   background-color:white;
@@ -65,7 +68,6 @@ td{
   font-weight:bold;
 }
 
-<<<<<<< HEAD
  /*td.petName a{
   color: #72bda3;
   text-decoration: none;
@@ -77,10 +79,8 @@ td.petName a:hover{
   color: white;
 }
 
-=======
->>>>>>> stashBranch
 /*begin main pet listing*/
-/*main background color for body*/
+/*class applied to body of entire application*/
 .petMainBody{
   background-color: #d8cfaf;
   color:#222;
@@ -89,6 +89,24 @@ td.petName a:hover{
 .petsMain{
   background-color: #d8cfaf;
   color: #222;
+  text-align: center;
+  vertical-align: middle;
+}
+.petsMain, p {
+  font-family: "Poiret One";
+  color: #632a7b;
+}
+
+.petPrintout{
+  vertical-align: middle;
+  height: auto;
+  width: 350px;
+  display: inline-block;
+  position: relative;
+}
+
+.petPrintout img  {
+  border: 5px solid #222;
 }
 
 p, .petsMain{
@@ -108,7 +126,7 @@ p, .petsMain{
   color:#72BDA3;
   text-transform: full-width;
 }
-/*main heading "meetour furry friends"*/
+/*main heading "meet our furry friends"*/
 #petlist{
   color: #72BDA3;
   font-family: "Poiret One";
@@ -120,6 +138,10 @@ p, .petsMain{
 /*end main pet listing*/
 
 /*begin admin edit*/
+.admin_control_panel{
+  margin: auto;
+  text-align: center;
+}
 
 #adminEdit{
   color:#72BDA3;
@@ -141,9 +163,6 @@ p, .petsMain{
   color: #72BDA3;
   text-shadow: 1px 1px 1px black;
 }
-
-
-
 
 .adminEditMain{
   background-color: black;
@@ -219,8 +238,6 @@ p, .petsMain{
   border-radius: 15px;
   margin-left: 25%;
 }
-
-
 
 .navbar-default {
     border-color: black;
@@ -336,11 +353,11 @@ p, .petsMain{
 
 .profile{
   font-family: "Poiret One";
-  color:#72BDA3;
+  color:#632a7b;
 }
 
 h1.profile {
-  color: #72bda3;
+  color: #632a7b;
   text-align: center;
   text-shadow: .75px .75px .75px #222;
   padding-top: 10px;
@@ -375,28 +392,6 @@ h1.profile {
   text-align: left;
 }
 /*end pet profile styling*/
-
-/*.petsMain {
-  color: #72bda3;
-  text-align: center;
-  vertical-align: middle;
-}*/
-.petsMain, p {
-  font-family: "Poiret One";
-  color: #632a7b;
-
-}
-.petPrintout{
-  vertical-align: middle;
-  height: auto;
-  width: 350px;
-  display: inline-block;
-  position: relative;
-
-}
-.petPrintout img  {
-  border: 5px solid #222;
-}
 
 /*admin home page*/
 

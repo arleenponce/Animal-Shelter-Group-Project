@@ -2,7 +2,7 @@
 <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 
-<a href="pets/search_pets">Search for your perfect pet</a>
+<a class="profile" href="pets/search_pets">Search for your perfect pet</a>
   <p id="notice"><%= notice %></p>
   <%= render 'login' %>
 
@@ -40,8 +40,8 @@
 </div>
 <br>
 
-<%= link_to 'New Pet', new_pet_path %> |
-<%= link_to 'Admin Panel', admin_path %>
+<%= link_to 'New Pet', new_pet_path, class: "profile" %> |
+<%= link_to 'Admin Panel', admin_path, class: "profile" %>
 
 
 </body>
