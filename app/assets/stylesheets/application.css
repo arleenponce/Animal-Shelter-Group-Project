@@ -30,7 +30,7 @@ div {
 }
 
 
-input[type="text"], textarea {
+/*input[type="text"], textarea {
   background-color:white;
   border: 1px solid black;
   border-radius: 3px;
@@ -38,6 +38,18 @@ input[type="text"], textarea {
 
 input[type="select"], area{
   background-color:#72BDA3;
+}
+
+input[type="number"], textarea {
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 3px;
+}*/
+
+#phone {
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 /*table text color for pets list*/
 td{
@@ -369,6 +381,9 @@ p, .petsMain{
   font-family: "Poiret One";
 }
 
+.actions{
+  color: black;
+}
 
 /*.outer {*/
   /*border: 4px solid blue;*/
