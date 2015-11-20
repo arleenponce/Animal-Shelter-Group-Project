@@ -1,20 +1,26 @@
 <style> body {background-color: lightblue;}</style>
 
-<%= render 'login' %>
-
-<h1>Admin Control Panel</h1>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 
-<%= link_to 'Add a Pet', new_pet_path %>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <%= render 'login' %>
 
-<br>
+    <h1>Admin Control Panel</h1>
+    <div class="row">
 
-<%= link_to 'Pets Listing', pets_path %>
+    <a href="/pets/new"><button type="button" class="admin-btn">Add a Pet</button></a>
 
-<br>
-
-<%= link_to 'Application Listings', application_forms_path %>
-
-<br>
-
-<%= link_to 'Main Page', root_path %>
+    <a href="/pets"><button type="button" class="admin-btn">Pet Listing</button></a>
+  </div>
+  <div class="row">
+    <a href="/application_forms"><button type="button" class="admin-btn">Applications</button></a>
+    <a href="/"><button type="button" class="admin-btn">Main Page</button></a>
+  </div>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
