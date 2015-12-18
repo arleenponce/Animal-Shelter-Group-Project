@@ -1,28 +1,9 @@
-== README
+== ShelterFriends
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to ShelterFriends, a group project made by 5 LEARN Academy students for a final class project. This is a work in progress, feel free to open issues and create PRs to improve this project.
 
-Things you may want to cover:
+The goal was to create an elegant interface that would increase the likelihood of adoption for pets everywhere.
 
-* Ruby version
+Application live online at <a href="https://aqueous-taiga-4911.herokuapp.com/">https://aqueous-taiga-4911.herokuapp.com/</a>, maintained by Emma Castor.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Default admin login in seeds.rb. Consider populating seed file with animals as well.
