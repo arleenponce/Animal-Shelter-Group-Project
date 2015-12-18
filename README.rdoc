@@ -4,6 +4,6 @@ Welcome to ShelterFriends, a group project made by 5 LEARN Academy students for 
 
 The goal was to create an elegant interface that would increase the likelihood of adoption for pets everywhere.
 
-Application live online at <a href="https://aqueous-taiga-4911.herokuapp.com/">https://aqueous-taiga-4911.herokuapp.com/</a>, maintained by Emma Castor.
+Application live online at https://aqueous-taiga-4911.herokuapp.com/, maintained by Emma Castor.
 
 Default admin login in seeds.rb. Consider populating seed file with animals as well.
